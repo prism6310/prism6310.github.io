@@ -1,0 +1,1572 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>八度电影院官网_品牌影迷社区_专注电影内容的视频门户</title>
+<meta name="description" content="八度电影院官方网站：深耕电影内容生态的品牌视频门户，汇聚原创影评、幕后访谈、城市放映与创作者社区，为影迷与企业搭建高品质的电影内容平台。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231a1c2b'/%3E%3Ccircle cx='32' cy='32' r='17' fill='none' stroke='%23ff5a5f' stroke-width='4'/%3E%3Ccircle cx='32' cy='32' r='5' fill='%23ff5a5f'/%3E%3Ccircle cx='32' cy='19' r='3' fill='%23f2c14e'/%3E%3C/svg%3E">
+<style>
+  :root{
+    --bd-bg:#14151f;
+    --bd-bg-alt:#1c1e2c;
+    --bd-card:#22253a;
+    --bd-line:rgba(255,255,255,.09);
+    --bd-text:#eceef6;
+    --bd-sub:#a2a7be;
+    --bd-red:#ff5a5f;
+    --bd-amber:#f2c14e;
+    --bd-teal:#39c6b5;
+    --bd-radius:16px;
+    --bd-shadow:0 18px 48px rgba(0,0,0,.42);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,sans-serif;
+    background:var(--bd-bg);
+    color:var(--bd-text);
+    line-height:1.75;
+    -webkit-font-smoothing:antialiased;
+  }
+  img{display:block;max-width:100%}
+  a{color:inherit;text-decoration:none}
+  button{font-family:inherit;cursor:pointer;border:none;background:none;color:inherit}
+  .bd-wrap{width:min(1180px,92vw);margin:0 auto}
+
+  /* ===== 吸顶区：公告条 + 页头 ===== */
+  .bd-sticky-top{position:sticky;top:0;z-index:90}
+  .bd-notice{
+    background:linear-gradient(90deg,#2a1d3d,#3a1f33 55%,#1f2b3a);
+    border-bottom:1px solid var(--bd-line);
+    font-size:13px;
+    color:#e6dcf5;
+  }
+  .bd-notice-inner{
+    display:flex;align-items:center;gap:14px;
+    padding:8px 0;overflow:hidden;
+  }
+  .bd-notice-badge{
+    flex:0 0 auto;
+    background:var(--bd-red);color:#fff;
+    font-size:11px;letter-spacing:.12em;
+    padding:2px 9px;border-radius:999px;
+    font-weight:700;
+  }
+  .bd-notice-track{overflow:hidden;white-space:nowrap;flex:1}
+  .bd-notice-track span{display:inline-block;padding-right:60px;animation:bd-marquee 34s linear infinite}
+  .bd-notice-track span::after{content:"";}
+  @keyframes bd-marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+  .bd-header{
+    background:rgba(20,21,31,.92);
+    backdrop-filter:blur(14px);
+    border-bottom:1px solid var(--bd-line);
+  }
+  .bd-header-inner{display:flex;align-items:center;gap:22px;padding:13px 0}
+  .bd-logo{display:flex;align-items:center;gap:11px;flex:0 0 auto}
+  .bd-logo-mark{
+    width:40px;height:40px;border-radius:12px;
+    background:radial-gradient(circle at 30% 25%,#ff7d81,#c9343d 70%);
+    position:relative;flex:0 0 auto;
+    box-shadow:0 0 0 3px rgba(255,90,95,.18);
+  }
+  .bd-logo-mark::before{
+    content:"";position:absolute;inset:11px;border-radius:50%;
+    border:2.5px solid rgba(20,21,31,.85);
+  }
+  .bd-logo-mark::after{
+    content:"";position:absolute;left:50%;top:50%;width:7px;height:7px;
+    border-radius:50%;background:#14151f;transform:translate(-50%,-50%);
+  }
+  .bd-logo-text b{display:block;font-size:17px;letter-spacing:.06em}
+  .bd-logo-text small{display:block;font-size:10px;letter-spacing:.34em;color:var(--bd-amber);text-transform:uppercase}
+  .bd-nav{display:flex;gap:4px;flex:1;justify-content:center;flex-wrap:wrap}
+  .bd-nav a{
+    font-size:14px;padding:7px 12px;border-radius:9px;color:var(--bd-sub);
+    transition:.22s;
+  }
+  .bd-nav a:hover{color:#fff;background:rgba(255,90,95,.14)}
+  .bd-header-tools{display:flex;align-items:center;gap:10px;flex:0 0 auto}
+  .bd-search{
+    display:flex;align-items:center;gap:8px;
+    background:var(--bd-bg-alt);border:1px solid var(--bd-line);
+    border-radius:999px;padding:6px 12px;transition:.22s;
+  }
+  .bd-search:focus-within{border-color:var(--bd-red);box-shadow:0 0 0 3px rgba(255,90,95,.14)}
+  .bd-search input{
+    background:none;border:none;outline:none;color:var(--bd-text);
+    font-size:13px;width:132px;
+  }
+  .bd-search input::placeholder{color:#6b7089}
+  .bd-search button{font-size:13px;color:var(--bd-red)}
+  .bd-search-hint{
+    position:absolute;margin-top:6px;background:var(--bd-card);
+    border:1px solid var(--bd-line);border-radius:12px;
+    padding:8px 12px;font-size:12.5px;color:var(--bd-sub);
+    box-shadow:var(--bd-shadow);display:none;z-index:95;max-width:260px;
+  }
+  .bd-search-hint.bd-show{display:block}
+  .bd-btn{
+    display:inline-flex;align-items:center;justify-content:center;gap:7px;
+    border-radius:999px;font-size:13.5px;font-weight:600;
+    padding:9px 20px;transition:.22s;border:1px solid transparent;
+  }
+  .bd-btn-primary{background:var(--bd-red);color:#fff}
+  .bd-btn-primary:hover{background:#ff7378;transform:translateY(-1px)}
+  .bd-btn-ghost{border-color:var(--bd-line);color:var(--bd-text)}
+  .bd-btn-ghost:hover{border-color:var(--bd-red);color:var(--bd-red)}
+  .bd-burger{display:none;font-size:20px;width:40px;height:40px;border-radius:10px;border:1px solid var(--bd-line)}
+
+  /* ===== 首屏 ===== */
+  .bd-main{padding-top:0}
+  .bd-hero{
+    position:relative;overflow:hidden;
+    border-bottom:1px solid var(--bd-line);
+    background:
+      radial-gradient(1100px 500px at 82% -10%,rgba(255,90,95,.22),transparent 62%),
+      radial-gradient(800px 460px at 6% 110%,rgba(57,198,181,.16),transparent 60%),
+      var(--bd-bg);
+  }
+  .bd-hero::before{
+    content:"";position:absolute;inset:0;
+    background-image:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);
+    background-size:52px 52px;
+    mask-image:radial-gradient(circle at 50% 40%,#000,transparent 78%);
+    pointer-events:none;
+  }
+  .bd-hero-inner{
+    position:relative;display:grid;grid-template-columns:5.5fr 4.5fr;gap:44px;
+    padding:64px 0 70px;align-items:center;
+  }
+  .bd-hero-tag{
+    display:inline-flex;align-items:center;gap:8px;
+    font-size:12px;letter-spacing:.16em;color:var(--bd-amber);
+    border:1px solid rgba(242,193,78,.4);
+    padding:5px 13px;border-radius:999px;margin-bottom:20px;
+  }
+  .bd-hero h1{
+    font-size:clamp(38px,6vw,66px);
+    line-height:1.1;letter-spacing:.02em;font-weight:800;
+  }
+  .bd-hero h1 em{
+    font-style:normal;
+    background:linear-gradient(100deg,#ff5a5f,#f2c14e 70%);
+    -webkit-background-clip:text;background-clip:text;color:transparent;
+  }
+  .bd-hero-lead{
+    margin:18px 0 14px;font-size:16.5px;color:#cdd1e2;max-width:36em;
+  }
+  .bd-hero-desc{font-size:14px;color:var(--bd-sub);max-width:38em}
+  .bd-hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin:26px 0 28px}
+  .bd-hero-stats{display:flex;gap:34px;flex-wrap:wrap;border-top:1px solid var(--bd-line);padding-top:22px}
+  .bd-stat b{display:block;font-size:26px;color:var(--bd-text);letter-spacing:.02em}
+  .bd-stat b i{font-style:normal;color:var(--bd-red);font-size:15px;margin-left:2px}
+  .bd-stat span{font-size:12.5px;color:var(--bd-sub)}
+  .bd-hero-visual{position:relative}
+  .bd-hero-frame{
+    position:relative;border-radius:22px;overflow:hidden;
+    border:1px solid rgba(255,255,255,.12);
+    box-shadow:var(--bd-shadow);
+    aspect-ratio:4/3.35;
+    background:#231a2c;
+  }
+  .bd-hero-frame img{width:100%;height:100%;object-fit:cover}
+  .bd-hero-play{
+    position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);
+    width:72px;height:72px;border-radius:50%;
+    background:rgba(20,21,31,.6);backdrop-filter:blur(4px);
+    border:1px solid rgba(255,255,255,.4);
+    display:flex;align-items:center;justify-content:center;
+    color:#fff;font-size:22px;transition:.25s;
+  }
+  .bd-hero-play:hover{background:var(--bd-red);border-color:var(--bd-red);transform:translate(-50%,-50%) scale(1.07)}
+  .bd-hero-frame-label{
+    position:absolute;left:16px;bottom:14px;
+    background:rgba(20,21,31,.72);backdrop-filter:blur(6px);
+    border:1px solid rgba(255,255,255,.13);
+    border-radius:10px;padding:7px 12px;font-size:12.5px;color:#e5e8f4;
+  }
+  .bd-hero-float{
+    position:absolute;right:-12px;top:-14px;
+    background:var(--bd-card);border:1px solid var(--bd-line);
+    border-radius:14px;padding:10px 14px;font-size:12px;color:var(--bd-sub);
+    box-shadow:var(--bd-shadow);
+  }
+  .bd-hero-float b{color:var(--bd-teal);font-size:15px;display:block}
+
+  /* ===== 通用段落 ===== */
+  .bd-section{padding:74px 0;border-bottom:1px solid var(--bd-line)}
+  .bd-section:nth-of-type(even){background:rgba(255,255,255,.014)}
+  .bd-sec-head{display:flex;align-items:flex-end;justify-content:space-between;gap:20px;margin-bottom:34px;flex-wrap:wrap}
+  .bd-sec-head h2{
+    font-size:clamp(24px,3.2vw,32px);line-height:1.25;letter-spacing:.02em;
+    position:relative;padding-left:16px;
+  }
+  .bd-sec-head h2::before{
+    content:"";position:absolute;left:0;top:8px;bottom:8px;width:4px;border-radius:3px;
+    background:linear-gradient(180deg,var(--bd-red),var(--bd-amber));
+  }
+  .bd-sec-head p{font-size:13.5px;color:var(--bd-sub);max-width:34em}
+  .bd-sec-link{font-size:13px;color:var(--bd-red);border-bottom:1px dashed rgba(255,90,95,.5);padding-bottom:2px}
+
+  /* 关键词解析长文 */
+  .bd-about-grid{display:grid;grid-template-columns:1.55fr 1fr;gap:46px;align-items:start}
+  .bd-about-body p{margin-bottom:16px;font-size:14.5px;color:#c6cadb}
+  .bd-about-body h3{
+    font-size:17px;margin:26px 0 10px;color:#fff;
+    display:flex;align-items:center;gap:9px;
+  }
+  .bd-about-body h3::before{content:"";width:7px;height:7px;border-radius:2px;background:var(--bd-amber);transform:rotate(45deg)}
+  .bd-about-aside{
+    background:linear-gradient(170deg,var(--bd-card),#1b1d2c);
+    border:1px solid var(--bd-line);border-radius:var(--bd-radius);
+    padding:24px;position:sticky;top:150px;
+  }
+  .bd-about-aside h3{font-size:15px;margin-bottom:14px;letter-spacing:.06em;color:var(--bd-amber)}
+  .bd-about-list{list-style:none;display:grid;gap:12px}
+  .bd-about-list li{display:flex;gap:11px;font-size:13.5px;color:var(--bd-sub)}
+  .bd-about-list li b{color:#fff;font-weight:600}
+  .bd-about-list li span{
+    flex:0 0 26px;height:26px;border-radius:8px;background:rgba(255,90,95,.14);
+    color:var(--bd-red);font-size:12px;display:flex;align-items:center;justify-content:center;font-weight:700;
+  }
+
+  /* 焦点内容 */
+  .bd-focus-grid{display:grid;grid-template-columns:1.35fr 1fr;gap:24px}
+  .bd-focus-main{
+    position:relative;border-radius:20px;overflow:hidden;
+    border:1px solid var(--bd-line);background:var(--bd-card);
+    display:flex;flex-direction:column;
+  }
+  .bd-focus-main .bd-cover{aspect-ratio:16/9.4}
+  .bd-focus-main-body{padding:20px 22px 22px}
+  .bd-focus-main-body h3{font-size:21px;line-height:1.38;margin-bottom:9px}
+  .bd-focus-main-body p{font-size:13.5px;color:var(--bd-sub)}
+  .bd-focus-side{display:grid;gap:14px;grid-template-rows:repeat(3,1fr)}
+  .bd-focus-item{
+    display:grid;grid-template-columns:132px 1fr;gap:14px;align-items:center;
+    background:var(--bd-card);border:1px solid var(--bd-line);
+    border-radius:14px;padding:10px;transition:.24s;
+  }
+  .bd-focus-item:hover{border-color:rgba(255,90,95,.5);transform:translateX(3px)}
+  .bd-focus-item .bd-cover{aspect-ratio:16/10;border-radius:9px}
+  .bd-focus-item h4{font-size:14.5px;line-height:1.4;margin-bottom:5px}
+  .bd-focus-item small{font-size:12px;color:var(--bd-sub)}
+
+  /* 封面组件 */
+  .bd-cover{position:relative;overflow:hidden;background:#2a2036}
+  .bd-cover img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+  .bd-cover::after{
+    content:"";position:absolute;inset:0;
+    background:linear-gradient(180deg,rgba(20,21,31,0) 42%,rgba(20,21,31,.82));
+  }
+  .bd-cover-tag{
+    position:absolute;left:10px;top:10px;z-index:2;
+    font-size:11px;letter-spacing:.06em;
+    background:rgba(20,21,31,.75);border:1px solid rgba(255,255,255,.18);
+    color:#fff;border-radius:6px;padding:3px 8px;
+  }
+  .bd-cover-dur{
+    position:absolute;right:9px;bottom:9px;z-index:2;
+    font-size:11px;background:rgba(20,21,31,.82);
+    padding:2px 7px;border-radius:5px;color:#dfe2ef;
+  }
+  .bd-card-hover:hover .bd-cover img{transform:scale(1.06)}
+
+  /* 视频流 */
+  .bd-feed{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .bd-card{
+    background:var(--bd-card);border:1px solid var(--bd-line);
+    border-radius:var(--bd-radius);overflow:hidden;display:flex;flex-direction:column;
+    transition:.26s;
+  }
+  .bd-card:hover{transform:translateY(-4px);border-color:rgba(255,90,95,.42);box-shadow:var(--bd-shadow)}
+  .bd-card .bd-cover{aspect-ratio:16/9}
+  .bd-card-body{padding:15px 16px 17px;display:flex;flex-direction:column;gap:9px;flex:1}
+  .bd-card-body h3{font-size:15.5px;line-height:1.42}
+  .bd-card-body .bd-excerpt{font-size:12.8px;color:var(--bd-sub);line-height:1.6}
+  .bd-meta{display:flex;align-items:center;gap:8px;font-size:12px;color:var(--bd-sub);flex-wrap:wrap}
+  .bd-avatar{
+    width:26px;height:26px;border-radius:50%;flex:0 0 auto;
+    display:flex;align-items:center;justify-content:center;
+    font-size:11.5px;font-weight:700;color:#14151f;
+    background:var(--bd-amber);
+  }
+  .bd-avatar.av-teal{background:var(--bd-teal);color:#0e1b19}
+  .bd-avatar.av-red{background:var(--bd-red);color:#fff}
+  .bd-avatar.av-violet{background:#b79bff;color:#1d1230}
+  .bd-avatar.av-pink{background:#ff9ec4;color:#33101e}
+  .bd-avatar.av-sky{background:#8fc8ff;color:#10203a}
+  .bd-tags{display:flex;gap:6px;flex-wrap:wrap;margin-top:auto}
+  .bd-tag{
+    font-size:11px;color:#cfd3e6;
+    background:rgba(255,255,255,.06);border:1px solid var(--bd-line);
+    border-radius:999px;padding:2px 9px;
+  }
+  .bd-card-actions{
+    display:flex;align-items:center;gap:14px;
+    border-top:1px solid var(--bd-line);padding-top:11px;margin-top:3px;
+    font-size:12px;color:var(--bd-sub);
+  }
+  .bd-act{display:inline-flex;align-items:center;gap:5px;transition:.2s;border-radius:6px;padding:2px 4px}
+  .bd-act:hover{color:#fff}
+  .bd-act.bd-liked{color:var(--bd-red)}
+  .bd-act.bd-saved{color:var(--bd-amber)}
+  .bd-act svg{width:14px;height:14px;fill:none;stroke:currentColor;stroke-width:1.9}
+  .bd-act.bd-liked svg,.bd-act.bd-saved svg{fill:currentColor}
+
+  /* 专题 */
+  .bd-topics{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+  .bd-topic{
+    position:relative;border-radius:16px;overflow:hidden;
+    border:1px solid var(--bd-line);min-height:238px;
+    display:flex;flex-direction:column;justify-content:flex-end;
+    padding:18px;transition:.28s;
+  }
+  .bd-topic img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;transition:transform .5s}
+  .bd-topic::after{
+    content:"";position:absolute;inset:0;z-index:1;
+    background:linear-gradient(180deg,rgba(16,17,26,.15),rgba(16,17,26,.9));
+  }
+  .bd-topic:hover img{transform:scale(1.07)}
+  .bd-topic:hover{transform:translateY(-4px)}
+  .bd-topic > *{position:relative;z-index:2}
+  .bd-topic-status{
+    align-self:flex-start;font-size:11px;padding:2px 9px;border-radius:999px;
+    background:rgba(255,90,95,.85);color:#fff;margin-bottom:auto;font-weight:600;
+  }
+  .bd-topic-status.bd-done{background:rgba(57,198,181,.85);color:#0d1a18}
+  .bd-topic h3{font-size:16px;line-height:1.4;margin:10px 0 5px}
+  .bd-topic p{font-size:12px;color:#c3c7d8;line-height:1.6}
+
+  /* 创作者 */
+  .bd-creators{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+  .bd-creator{
+    background:linear-gradient(175deg,#242739,#1b1d2b);
+    border:1px solid var(--bd-line);border-radius:var(--bd-radius);
+    padding:22px 18px;text-align:center;transition:.25s;position:relative;
+  }
+  .bd-creator:hover{border-color:rgba(242,193,78,.5);transform:translateY(-4px)}
+  .bd-creator-avatar{
+    width:66px;height:66px;border-radius:22px;margin:0 auto 13px;
+    display:flex;align-items:center;justify-content:center;
+    font-size:24px;font-weight:800;color:#14151f;
+  }
+  .bd-creator h3{font-size:15.5px;margin-bottom:4px}
+  .bd-creator .bd-field{font-size:12px;color:var(--bd-amber);margin-bottom:9px}
+  .bd-creator p{font-size:12.5px;color:var(--bd-sub);line-height:1.65;margin-bottom:13px}
+  .bd-creator-stats{display:flex;justify-content:center;gap:16px;font-size:12px;color:var(--bd-sub);border-top:1px solid var(--bd-line);padding-top:11px}
+  .bd-creator-stats b{color:#fff;display:block;font-size:14px}
+
+  /* 故事/随笔 */
+  .bd-stories{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  .bd-story{
+    background:var(--bd-bg-alt);border:1px solid var(--bd-line);
+    border-radius:var(--bd-radius);padding:22px;
+    display:flex;flex-direction:column;gap:11px;transition:.22s;
+  }
+  .bd-story:hover{border-color:rgba(57,198,181,.45)}
+  .bd-story-quote{font-size:22px;color:var(--bd-teal);line-height:1}
+  .bd-story h3{font-size:16px;line-height:1.4}
+  .bd-story p{font-size:13px;color:var(--bd-sub);line-height:1.75}
+  .bd-story .bd-meta{margin-top:auto;font-size:12px}
+
+  /* 作品墙 */
+  .bd-wall{display:grid;grid-template-columns:repeat(6,1fr);gap:14px;grid-auto-rows:118px}
+  .bd-wall figure{position:relative;border-radius:12px;overflow:hidden;border:1px solid var(--bd-line)}
+  .bd-wall img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+  .bd-wall figure:hover img{transform:scale(1.08)}
+  .bd-wall figcaption{
+    position:absolute;left:0;right:0;bottom:0;z-index:2;
+    padding:22px 10px 8px;font-size:11.5px;color:#eaecf5;
+    background:linear-gradient(180deg,transparent,rgba(14,15,23,.88));
+  }
+  .bd-wall .bd-w2{grid-column:span 2;grid-row:span 2}
+  .bd-wall .bd-w1{grid-column:span 1;grid-row:span 2}
+  .bd-wall .bd-w3{grid-column:span 3;grid-row:span 1}
+
+  /* 评论 */
+  .bd-reviews{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .bd-review{
+    background:var(--bd-card);border:1px solid var(--bd-line);
+    border-radius:14px;padding:18px;position:relative;
+  }
+  .bd-review::before{
+    content:"”";position:absolute;right:16px;top:6px;
+    font-size:44px;line-height:1;color:rgba(255,255,255,.07);font-family:Georgia,serif;
+  }
+  .bd-review p{font-size:13.2px;color:#c9cddf;line-height:1.75;margin-bottom:14px}
+  .bd-review .bd-meta{font-size:12px}
+
+  /* 企业动态 */
+  .bd-timeline{display:grid;gap:0;border-left:2px solid rgba(255,90,95,.35);margin-left:8px}
+  .bd-tl-item{position:relative;padding:0 0 26px 26px}
+  .bd-tl-item::before{
+    content:"";position:absolute;left:-7px;top:7px;width:12px;height:12px;border-radius:50%;
+    background:var(--bd-red);box-shadow:0 0 0 4px rgba(255,90,95,.16);
+  }
+  .bd-tl-item time{font-size:12px;color:var(--bd-amber);letter-spacing:.06em}
+  .bd-tl-item h3{font-size:15.5px;margin:5px 0 5px}
+  .bd-tl-item p{font-size:13px;color:var(--bd-sub)}
+
+  /* 合作 & FAQ & 联系 */
+  .bd-partners{display:flex;flex-wrap:wrap;gap:12px}
+  .bd-partner{
+    flex:1 1 168px;display:flex;align-items:center;justify-content:center;gap:9px;
+    border:1px dashed var(--bd-line);border-radius:12px;
+    padding:18px 12px;font-size:13.5px;color:#cdd1e2;
+    background:rgba(255,255,255,.02);transition:.22s;
+  }
+  .bd-partner:hover{border-color:var(--bd-red);color:#fff}
+  .bd-partner i{
+    font-style:normal;width:26px;height:26px;border-radius:8px;
+    display:flex;align-items:center;justify-content:center;
+    background:rgba(255,90,95,.16);color:var(--bd-red);font-size:12px;font-weight:700;
+  }
+
+  .bd-assist-grid{display:grid;grid-template-columns:1.25fr 1fr;gap:40px;align-items:start}
+  .bd-faq details{
+    border:1px solid var(--bd-line);border-radius:12px;
+    margin-bottom:11px;background:var(--bd-bg-alt);overflow:hidden;
+  }
+  .bd-faq summary{
+    cursor:pointer;list-style:none;padding:14px 18px;
+    font-size:14px;font-weight:600;color:#e9ecf6;
+    display:flex;justify-content:space-between;gap:12px;align-items:center;
+  }
+  .bd-faq summary::-webkit-details-marker{display:none}
+  .bd-faq summary::after{content:"+";color:var(--bd-red);font-size:19px;font-weight:400;transition:.22s}
+  .bd-faq details[open] summary::after{transform:rotate(45deg)}
+  .bd-faq details p{padding:0 18px 15px;font-size:13.2px;color:var(--bd-sub);line-height:1.8}
+  .bd-contact-box{
+    background:linear-gradient(165deg,#262a3e,#1a1c29);
+    border:1px solid var(--bd-line);border-radius:var(--bd-radius);
+    padding:26px;
+  }
+  .bd-contact-box h3{font-size:17px;margin-bottom:8px}
+  .bd-contact-box > p{font-size:13px;color:var(--bd-sub);margin-bottom:18px}
+  .bd-contact-row{display:flex;justify-content:space-between;gap:12px;font-size:13.2px;padding:10px 0;border-bottom:1px dashed var(--bd-line)}
+  .bd-contact-row span{color:var(--bd-sub)}
+  .bd-contact-actions{display:flex;gap:10px;margin-top:20px;flex-wrap:wrap}
+
+  /* 订阅条 */
+  .bd-join{
+    margin:0 0 0;padding:56px 0;
+    background:
+      radial-gradient(700px 260px at 85% 10%,rgba(242,193,78,.18),transparent 65%),
+      radial-gradient(620px 300px at 10% 100%,rgba(255,90,95,.2),transparent 62%),
+      var(--bd-bg-alt);
+    border-bottom:1px solid var(--bd-line);
+  }
+  .bd-join-inner{display:flex;align-items:center;justify-content:space-between;gap:30px;flex-wrap:wrap}
+  .bd-join h2{font-size:clamp(22px,3vw,28px);margin-bottom:8px}
+  .bd-join p{font-size:13.5px;color:var(--bd-sub);max-width:34em}
+  .bd-join-form{display:flex;gap:9px;flex-wrap:wrap}
+  .bd-join-form input{
+    background:#12131d;border:1px solid var(--bd-line);border-radius:999px;
+    padding:11px 18px;color:var(--bd-text);font-size:13.5px;outline:none;min-width:220px;
+  }
+  .bd-join-form input:focus{border-color:var(--bd-red)}
+
+  /* 页脚 */
+  .bd-footer{background:#101119;padding:56px 0 26px;font-size:13px;color:var(--bd-sub)}
+  .bd-footer-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:34px;margin-bottom:38px}
+  .bd-footer h4{font-size:13.5px;color:#fff;margin-bottom:14px;letter-spacing:.05em}
+  .bd-footer ul{list-style:none;display:grid;gap:9px}
+  .bd-footer ul a:hover{color:var(--bd-red)}
+  .bd-footer-brand p{font-size:12.8px;line-height:1.85;margin:12px 0 0;max-width:30em}
+  .bd-footer-bottom{
+    border-top:1px solid var(--bd-line);padding-top:20px;
+    display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;font-size:12.2px;
+  }
+  .bd-footer-bottom span{color:#767b93}
+
+  /* 回到顶部 & Toast */
+  .bd-to-top{
+    position:fixed;right:22px;bottom:26px;z-index:80;
+    width:46px;height:46px;border-radius:14px;
+    background:var(--bd-red);color:#fff;font-size:18px;
+    display:flex;align-items:center;justify-content:center;
+    box-shadow:0 12px 28px rgba(255,90,95,.34);
+    opacity:0;pointer-events:none;transform:translateY(10px);transition:.28s;
+  }
+  .bd-to-top.bd-show{opacity:1;pointer-events:auto;transform:none}
+  .bd-toast{
+    position:fixed;left:50%;bottom:38px;transform:translate(-50%,20px);
+    background:rgba(35,37,58,.97);border:1px solid rgba(255,90,95,.45);
+    color:#fff;font-size:13.5px;padding:11px 22px;border-radius:999px;
+    box-shadow:var(--bd-shadow);z-index:120;opacity:0;pointer-events:none;transition:.3s;
+  }
+  .bd-toast.bd-show{opacity:1;transform:translate(-50%,0)}
+
+  /* 弹窗通用 */
+  .bd-modal{
+    position:fixed;inset:0;z-index:130;display:none;
+    align-items:center;justify-content:center;padding:20px;
+    background:rgba(9,10,16,.72);backdrop-filter:blur(4px);
+  }
+  .bd-modal.bd-show{display:flex}
+  .bd-modal-card{
+    width:min(520px,100%);background:var(--bd-card);
+    border:1px solid var(--bd-line);border-radius:18px;padding:26px;
+    box-shadow:var(--bd-shadow);position:relative;max-height:86vh;overflow:auto;
+  }
+  .bd-modal-card h3{font-size:18px;margin-bottom:8px}
+  .bd-modal-card p{font-size:13.2px;color:var(--bd-sub);margin-bottom:16px}
+  .bd-modal-close{position:absolute;right:14px;top:12px;font-size:20px;color:var(--bd-sub)}
+  .bd-modal-card textarea,.bd-modal-card input{
+    width:100%;background:#14151f;border:1px solid var(--bd-line);
+    border-radius:10px;padding:11px 13px;color:var(--bd-text);
+    font-size:13.2px;outline:none;font-family:inherit;margin-bottom:12px;
+  }
+  .bd-modal-card textarea{resize:vertical;min-height:92px}
+  .bd-modal-card textarea:focus,.bd-modal-card input:focus{border-color:var(--bd-red)}
+  .bd-share-row{display:flex;gap:9px;flex-wrap:wrap;margin-bottom:6px}
+  .bd-share-row button{
+    flex:1 1 88px;padding:10px;border-radius:10px;font-size:12.5px;
+    background:rgba(255,255,255,.05);border:1px solid var(--bd-line);transition:.2s;
+  }
+  .bd-share-row button:hover{border-color:var(--bd-red);color:var(--bd-red)}
+
+  /* 响应式 */
+  @media (max-width:1024px){
+    .bd-hero-inner{grid-template-columns:1fr;gap:34px;padding:48px 0 56px}
+    .bd-hero-visual{max-width:560px}
+    .bd-about-grid{grid-template-columns:1fr;gap:30px}
+    .bd-about-aside{position:static}
+    .bd-focus-grid{grid-template-columns:1fr}
+    .bd-feed{grid-template-columns:repeat(2,1fr)}
+    .bd-topics{grid-template-columns:repeat(2,1fr)}
+    .bd-creators{grid-template-columns:repeat(2,1fr)}
+    .bd-stories{grid-template-columns:1fr 1fr}
+    .bd-reviews{grid-template-columns:1fr 1fr}
+    .bd-assist-grid{grid-template-columns:1fr;gap:26px}
+    .bd-footer-grid{grid-template-columns:1fr 1fr}
+    .bd-wall{grid-template-columns:repeat(4,1fr)}
+  }
+  @media (max-width:760px){
+    .bd-nav{
+      display:none;position:absolute;left:0;right:0;top:100%;
+      background:rgba(20,21,31,.98);border-bottom:1px solid var(--bd-line);
+      flex-direction:column;padding:12px 5vw 18px;gap:2px;
+    }
+    .bd-nav.bd-open{display:flex}
+    .bd-header-inner{position:relative;flex-wrap:wrap}
+    .bd-burger{display:flex;align-items:center;justify-content:center;margin-left:auto}
+    .bd-search input{width:96px}
+    .bd-feed,.bd-topics,.bd-creators,.bd-stories,.bd-reviews{grid-template-columns:1fr}
+    .bd-wall{grid-template-columns:repeat(2,1fr);grid-auto-rows:104px}
+    .bd-wall .bd-w2,.bd-wall .bd-w3{grid-column:span 2}
+    .bd-focus-item{grid-template-columns:112px 1fr}
+    .bd-section{padding:54px 0}
+    .bd-footer-grid{grid-template-columns:1fr}
+    .bd-hero-stats{gap:22px}
+    .bd-about-aside{top:auto}
+  }
+  @media (prefers-reduced-motion:reduce){
+    *{animation-duration:.001s!important;transition-duration:.001s!important}
+  }
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<!-- 吸顶：公告条 + 页头 -->
+<div class="bd-sticky-top">
+  <div class="bd-notice" role="region" aria-label="站点更新公告">
+    <div class="bd-wrap bd-notice-inner">
+      <span class="bd-notice-badge">官方发布</span>
+      <div class="bd-notice-track">
+        <span>八度电影院官网 11 月新片单上线：城市放映企划《夜行八度》更新第 4 集 ｜ 幕后访谈《剪辑台上的三小时》开放报名 ｜ 创作者征集「我的第一场放映」投稿通道持续开放 ｜ 精品内容「胶片里的旧城」专题收官</span>
+        <span>八度电影院官网 11 月新片单上线：城市放映企划《夜行八度》更新第 4 集 ｜ 幕后访谈《剪辑台上的三小时》开放报名 ｜ 创作者征集「我的第一场放映」投稿通道持续开放 ｜ 精品内容「胶片里的旧城」专题收官</span>
+      </div>
+    </div>
+  </div>
+
+  <header class="bd-header">
+    <div class="bd-wrap bd-header-inner">
+      <a class="bd-logo" href="#bd-top" aria-label="八度电影院官网首页">
+        <span class="bd-logo-mark" aria-hidden="true"></span>
+        <span class="bd-logo-text">
+          <b>八度电影院</b>
+          <small>Eighth Degree</small>
+        </span>
+      </a>
+      <nav class="bd-nav" id="bd-main-nav" aria-label="主导航">
+        <a href="#bd-top">首页</a>
+        <a href="#bd-about">品牌解析</a>
+        <a href="#bd-focus">焦点内容</a>
+        <a href="#bd-feed">热门影像</a>
+        <a href="#bd-topics">专题企划</a>
+        <a href="#bd-creators">创作者</a>
+        <a href="#bd-updates">企业动态</a>
+        <a href="#bd-help">帮助与联系</a>
+      </nav>
+      <div class="bd-header-tools">
+        <div class="bd-search" style="position:relative">
+          <input type="search" id="bd-search-input" placeholder="搜索影片 / 导演 / 专题" aria-label="站内搜索">
+          <button type="button" id="bd-search-btn" aria-label="搜索">搜索</button>
+          <div class="bd-search-hint" id="bd-search-hint">试试「夜行」「胶片」「幕后」等关键词，回车查看匹配结果。</div>
+        </div>
+        <button class="bd-btn bd-btn-primary" type="button" data-bd-open="submit">我要投稿</button>
+        <button class="bd-burger" id="bd-burger" aria-label="展开导航菜单" aria-expanded="false">☰</button>
+      </div>
+    </div>
+  </header>
+</div>
+
+<main class="bd-main" id="bd-top">
+
+  <!-- 首屏 -->
+  <section class="bd-hero" aria-label="八度电影院首屏">
+    <div class="bd-wrap bd-hero-inner">
+      <div>
+        <span class="bd-hero-tag">官方网站 · 品牌视频门户</span>
+        <h1>八度<em>电影院</em></h1>
+        <p class="bd-hero-lead">一家以电影内容为核心的企业级视频品牌，把银幕之外的八度空间，搬进每一次点击与放映。</p>
+        <p class="bd-hero-desc">作为八度电影院官网，我们以原创影评、幕后访谈、城市放映与创作者社区为四大支柱，深耕电影垂直领域，持续运营一个真实、温暖、值得信赖的内容生态。</p>
+        <div class="bd-hero-actions">
+          <a class="bd-btn bd-btn-primary" href="#bd-feed">浏览热门影像</a>
+          <a class="bd-btn bd-btn-ghost" href="#bd-about">了解品牌故事</a>
+          <button class="bd-btn bd-btn-ghost" type="button" data-bd-open="share">分享本站</button>
+        </div>
+        <div class="bd-hero-stats">
+          <div class="bd-stat"><b data-bd-count="1280">0</b><span>累计原创影像作品</span></div>
+          <div class="bd-stat"><b data-bd-count="96">0</b><span>签约与入驻创作者</span></div>
+          <div class="bd-stat"><b data-bd-count="35">0</b><span>城市放映合作空间</span></div>
+        </div>
+      </div>
+      <div class="bd-hero-visual">
+        <div class="bd-hero-float"><b>本周上新</b>12 部短片 · 3 场访谈</div>
+        <div class="bd-hero-frame">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 670'%3E%3Cdefs%3E%3ClinearGradient id='bg' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23221c33'/%3E%3Cstop offset='1' stop-color='%233c2130'/%3E%3C/linearGradient%3E%3CradialGradient id='glow' cx='0.7' cy='0.3' r='0.6'%3E%3Cstop offset='0' stop-color='%23ff5a5f' stop-opacity='0.55'/%3E%3Cstop offset='1' stop-color='%23ff5a5f' stop-opacity='0'/%3E%3C/radialGradient%3E%3C/defs%3E%3Crect width='800' height='670' fill='url(%23bg)'/%3E%3Crect width='800' height='670' fill='url(%23glow)'/%3E%3Ccircle cx='400' cy='335' r='210' fill='none' stroke='%23f2c14e' stroke-width='2' stroke-dasharray='10 14' opacity='0.5'/%3E%3Ccircle cx='400' cy='335' r='152' fill='none' stroke='%23ff5a5f' stroke-width='3' opacity='0.8'/%3E%3Ccircle cx='400' cy='335' r='96' fill='%23191a28' stroke='%23ffffff' stroke-opacity='0.25' stroke-width='2'/%3E%3Cpath d='M372 292 L372 378 L448 335 Z' fill='%23f2c14e'/%3E%3Cg stroke='%23ffffff' stroke-opacity='0.16' stroke-width='2'%3E%3Cline x1='60' y1='582' x2='740' y2='582'/%3E%3Cline x1='60' y1='582' x2='60' y2='540'/%3E%3Cline x1='740' y1='582' x2='740' y2='540'/%3E%3C/g%3E%3Cg fill='%23ffffff' fill-opacity='0.28'%3E%3Crect x='92' y='96' width='8' height='52' rx='4'/%3E%3Crect x='112' y='96' width='8' height='52' rx='4'/%3E%3Crect x='132' y='96' width='8' height='52' rx='4'/%3E%3Crect x='152' y='96' width='8' height='52' rx='4'/%3E%3Crect x='172' y='96' width='8' height='52' rx='4'/%3E%3C/g%3E%3Ctext x='400' y='632' text-anchor='middle' font-family='sans-serif' font-size='22' fill='%23f2c14e' fill-opacity='0.85' letter-spacing='6'%3EEIGHTH DEGREE CINEMA%3C/text%3E%3C/svg%3E" alt="八度电影院品牌主视觉：深色放映厅与环形光晕中的播放符号" width="800" height="670">
+          <span class="bd-hero-frame-label">品牌主视觉 · 八度放映厅</span>
+          <a class="bd-hero-play" href="#bd-focus" aria-label="前往焦点内容">▶</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 品牌解析 -->
+  <section class="bd-section" id="bd-about" aria-labelledby="bd-about-title">
+    <div class="bd-wrap">
+      <div class="bd-sec-head">
+        <h2 id="bd-about-title">品牌解析：八度电影院如何理解电影</h2>
+        <p>一个关于关键词的深度介绍，也是一份写给影迷与创作者的内容说明书。</p>
+      </div>
+      <div class="bd-about-grid">
+        <div class="bd-about-body">
+          <p>八度电影院并不是一个简单的片库，而是一个由企业持续运营的视频内容品牌。八度，在音乐里指的是一个完整的音程跨度；在电影里，它更像观众与作品之间那段说不清、但确实存在的距离。八度电影院官网想做的事情，就是把这八度的距离，用内容一点点填满。</p>
+          <p>作为一家专注电影垂直领域的内容平台，我们把内容生态拆成四层：第一层是原创影像，包括短片、纪录、实验影像与城市观察；第二层是深度解析，影评、拉片、视听语言拆解与行业观察；第三层是人物，导演、摄影、剪辑、美术、放映员与普通观众的真实访谈；第四层是社区，让创作者与影迷围绕作品持续对话。四层之间互相导流，形成可被检索、可被讨论、也可被反复观看的精品内容池。</p>
+          <h3>为什么是「八度」</h3>
+          <p>很多影迷问，为什么一家电影内容平台要叫「八度电影院」。我们的回答是：电影本身就是一个关于跨度的艺术。从剧本到成片，从导演的想象到观众的共鸣，中间隔着无数个可以被感知的刻度。八度代表着这种跨度感，也代表着我们对内容品质的要求——不是把观众留在浅层的信息里，而是陪他们多走几度，走到光线更暗、声音更清晰的地方。</p>
+          <p>在这个意义上，八度电影院官网更像一间长期开放的放映厅。它不追求一次性的话题爆发，而追求长久的陪伴：一部短片上线后，我们会在评论区继续聊；一场访谈结束后，我们会整理文字版，供错过直播的人补课；一个专题收官时，我们会把创作者的笔记、观众的留言和幕后花絮归档，做成可以回看的页面。这些细节看起来琐碎，却是品牌口碑真正的来源。</p>
+          <h3>内容生态与创作者立场</h3>
+          <p>我们相信，好的电影内容社区需要两条腿走路：一条是专业，一条是温度。专业意味着我们尊重影像的语法，尊重创作者对画面的判断，也尊重观众的智力；温度意味着我们不把影迷当作数据，不把创作者当作产能。因此在八度电影院的创作者矩阵里，既有成熟导演与摄影指导，也有第一次拍片的学生和只拍自家窗外的业余作者。我们为不同阶段的创作者提供不同的支持：拍摄基金、后期协作、放映场地、版权咨询与发行建议。</p>
+          <p>平台对原创与正版的态度非常明确：所有上线的影像内容均需完成授权确认，引用素材需标注出处；我们提供高清播放与多端适配，也提供可下载的创作规范文档，帮助新作者少走弯路。官方网站会定期发布内容规范更新与创作者公约修订记录，让规则透明可查。这种持续运营的耐心，是八度电影院作为一个企业品牌最重要的资产。</p>
+          <h3>面向未来的三件事</h3>
+          <p>未来一年，八度电影院会把精力放在三件事上。第一，继续做深城市放映网络，让影像重新回到可以面对面交流的空间里；第二，完善创作者成长路径，从投稿、评审、上线到分成，形成清晰的成长阶梯；第三，把行业观察做得更扎实，邀请更多一线从业者参与对谈，让平台成为行业内值得信赖的信息节点。</p>
+          <p>如果你是一个影迷，欢迎把这里当成你的常驻网站；如果你是一个创作者，欢迎把作品交给我们；如果你是一个企业或空间，欢迎和我们一起做一场放映。八度电影院官网会长期在线，持续更新，也持续欢迎新的声音加入。我们相信，电影的力量不在于它有多热闹，而在于它能否让人在某个瞬间感到被理解、被陪伴。这大概就是八度电影院想做的事，也是我们愿意一直做下去的理由。</p>
+        </div>
+        <aside class="bd-about-aside" aria-label="品牌关键信息">
+          <h3>品牌关键信息</h3>
+          <ul class="bd-about-list">
+            <li><span>01</span><div><b>定位</b>：电影垂直领域内容品牌与视频门户</div></li>
+            <li><span>02</span><div><b>官网</b>：八度电影院官方网站，品牌官方发布渠道</div></li>
+            <li><span>03</span><div><b>核心内容</b>：原创影像 / 深度解析 / 人物访谈 / 城市放映</div></li>
+            <li><span>04</span><div><b>创作者</b>：96 位签约与入驻作者，覆盖 12 个城市</div></li>
+            <li><span>05</span><div><b>原则</b>：原创、正版、高清、品质优先</div></li>
+            <li><span>06</span><div><b>社会责任</b>：青年影像扶持计划与公益放映</div></li>
+          </ul>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- 焦点内容 -->
+  <section class="bd-section" id="bd-focus" aria-labelledby="bd-focus-title">
+    <div class="bd-wrap">
+      <div class="bd-sec-head">
+        <h2 id="bd-focus-title">焦点内容：本周值得留意的影像</h2>
+        <p>由编辑部与企业内容团队共同推荐的精品内容，每一部都有完整的作者与制作信息。</p>
+      </div>
+      <div class="bd-focus-grid">
+        <article class="bd-focus-main bd-card-hover">
+          <div class="bd-cover">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 470'%3E%3Cdefs%3E%3ClinearGradient id='n1' x1='0' y1='1' x2='0.9' y2='0'%3E%3Cstop offset='0' stop-color='%230c1523'/%3E%3Cstop offset='1' stop-color='%232b4c66'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='470' fill='url(%23n1)'/%3E%3Cg fill='%23f2c14e' fill-opacity='0.9'%3E%3Ccircle cx='660' cy='96' r='30'/%3E%3C/g%3E%3Cg fill='%23121c2b'%3E%3Crect x='0' y='300' width='800' height='170'/%3E%3C/g%3E%3Cg fill='%23365f7d' fill-opacity='0.85'%3E%3Crect x='70' y='250' width='54' height='62'/%3E%3Crect x='132' y='214' width='44' height='98'/%3E%3Crect x='184' y='262' width='66' height='50'/%3E%3Crect x='258' y='228' width='40' height='84'/%3E%3Crect x='306' y='270' width='70' height='42'/%3E%3C/g%3E%3Cg stroke='%23f2c14e' stroke-opacity='0.75' stroke-width='3' fill='none'%3E%3Cpath d='M520 300 q40 -120 90 -60 q36 44 90 -10'/%3E%3C/g%3E%3Cg fill='%23ffffff' fill-opacity='0.7'%3E%3Ccircle cx='300' cy='150' r='2.4'/%3E%3Ccircle cx='360' cy='120' r='1.8'/%3E%3Ccircle cx='430' cy='168' r='2.1'/%3E%3Ccircle cx='500' cy='128' r='1.6'/%3E%3Ccircle cx='560' cy='180' r='2.2'/%3E%3C/g%3E%3Crect x='0' y='0' width='800' height='470' fill='%23000000' fill-opacity='0.12'/%3E%3C/svg%3E" alt="夜行八度城市放映企划封面：深蓝夜色中的街道轮廓与路灯" width="800" height="470">
+            <span class="bd-cover-tag">焦点首推</span>
+            <span class="bd-cover-dur">24:18</span>
+          </div>
+          <div class="bd-focus-main-body">
+            <h3>《夜行八度》第 4 集：凌晨两点的旧影院与它的最后一位放映员</h3>
+            <p>城市放映企划的第四站，我们跟随一位在岗三十一年的放映员，记录他如何在数字化时代仍然坚持手工对焦。这是八度电影院官网本季度最具分量的原创纪录短片之一。</p>
+            <div class="bd-meta" style="margin-top:14px">
+              <span class="bd-avatar av-sky">夜</span>
+              <span>夜行影像社</span>
+              <span>·</span>
+              <span>11 月 18 日</span>
+              <span>·</span>
+              <span>播放 8.6 万</span>
+            </div>
+            <div class="bd-card-actions" style="border-top:none;padding-top:12px">
+              <button class="bd-act" type="button" data-bd-like aria-pressed="false">
+                <svg viewBox="0 0 24 24"><path d="M12 20s-7-4.4-7-9.2A4.1 4.1 0 0 1 12 7a4.1 4.1 0 0 1 7 3.8C19 15.6 12 20 12 20z"/></svg>
+                <span>点赞 <i data-bd-like-num>1264</i></span>
+              </button>
+              <button class="bd-act" type="button" data-bd-save aria-pressed="false">
+                <svg viewBox="0 0 24 24"><path d="M6 4h12v16l-6-4-6 4z"/></svg>
+                <span>收藏</span>
+              </button>
+              <button class="bd-act" type="button" data-bd-open="comment">评论</button>
+              <button class="bd-act" type="button" data-bd-open="share">分享</button>
+            </div>
+          </div>
+        </article>
+
+        <div class="bd-focus-side">
+          <article class="bd-focus-item bd-card-hover">
+            <div class="bd-cover">
+              <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 200'%3E%3Crect width='320' height='200' fill='%23302a45'/%3E%3Ccircle cx='160' cy='104' r='62' fill='none' stroke='%23ff5a5f' stroke-width='3'/%3E%3Ccircle cx='160' cy='104' r='34' fill='%231b1726'/%3E%3Cpath d='M150 88 L150 120 L176 104 Z' fill='%23f2c14e'/%3E%3Cg fill='%23ff9ec4' fill-opacity='0.5'%3E%3Crect x='24' y='24' width='10' height='64' rx='5'/%3E%3Crect x='44' y='24' width='10' height='64' rx='5'/%3E%3Crect x='64' y='24' width='10' height='64' rx='5'/%3E%3C/g%3E%3C/svg%3E" alt="剪辑台上的三小时访谈封面：紫色背景中的取景框与播放符号" width="320" height="200">
+              <span class="bd-cover-dur">18:40</span>
+            </div>
+            <div>
+              <h4>幕后访谈：剪辑台上的三小时</h4>
+              <small>与剪辑指导聊聊节奏的秘密</small>
+            </div>
+          </article>
+          <article class="bd-focus-item bd-card-hover">
+            <div class="bd-cover">
+              <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 200'%3E%3Crect width='320' height='200' fill='%231d332f'/%3E%3Cg stroke='%2339c6b5' stroke-width='2' fill='none' opacity='0.85'%3E%3Cpath d='M0 150 q60 -60 110 -18 q52 44 108 -22 q44 -50 102 6'/%3E%3Cpath d='M0 170 q60 -50 110 -14 q52 38 108 -18 q44 -44 102 0'/%3E%3C/g%3E%3Ccircle cx='246' cy='62' r='26' fill='%23f2c14e' fill-opacity='0.9'/%3E%3C/svg%3E" alt="胶片里的旧城专题封面：绿色调山线与暖色日光" width="320" height="200">
+              <span class="bd-cover-tag">专题</span>
+              <span class="bd-cover-dur">6 集</span>
+            </div>
+            <div>
+              <h4>胶片里的旧城：六集城市记忆</h4>
+              <small>八度电影院独家企划</small>
+            </div>
+          </article>
+          <article class="bd-focus-item bd-card-hover">
+            <div class="bd-cover">
+              <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 200'%3E%3Crect width='320' height='200' fill='%232a1f14'/%3E%3Cg fill='%23f2c14e'%3E%3Crect x='36' y='128' width='22' height='48'/%3E%3Crect x='68' y='104' width='22' height='72'/%3E%3Crect x='100' y='140' width='22' height='36'/%3E%3Crect x='132' y='92' width='22' height='84'/%3E%3Crect x='164' y='122' width='22' height='54'/%3E%3Crect x='196' y='106' width='22' height='70'/%3E%3C/g%3E%3Cg fill='%23ff5a5f'%3E%3Ccircle cx='238' cy='70' r='18'/%3E%3C/g%3E%3Cg stroke='%23ffffff' stroke-opacity='0.3' stroke-width='2'%3E%3Cline x1='30' y1='176' x2='290' y2='176'/%3E%3C/g%3E%3C/svg%3E" alt="放映员的一天数据榜单封面：暖黄色柱状图与红色圆点" width="320" height="200">
+              <span class="bd-cover-tag">榜单</span>
+              <span class="bd-cover-dur">12:05</span>
+            </div>
+            <div>
+              <h4>放映员的一天：本周热度榜第一</h4>
+              <small>创作者「旧光」纪录短片</small>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 热门影像 -->
+  <section class="bd-section" id="bd-feed" aria-labelledby="bd-feed-title">
+    <div class="bd-wrap">
+      <div class="bd-sec-head">
+        <h2 id="bd-feed-title">热门影像：来自创作者与编辑部的持续更新</h2>
+        <a class="bd-sec-link" href="#bd-creators">查看全部创作者</a>
+      </div>
+      <div class="bd-feed">
+
+        <article class="bd-card bd-card-hover">
+          <div class="bd-cover">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 480 270'%3E%3Cdefs%3E%3ClinearGradient id='a1' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23162e3d'/%3E%3Cstop offset='1' stop-color='%23306b7a'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='480' height='270' fill='url(%23a1)'/%3E%3Cg stroke='%23e9f6f7' stroke-opacity='0.55' stroke-width='2' fill='none'%3E%3Cpath d='M40 200 q40 -46 82 -12 q40 32 84 -8'/%3E%3Cpath d='M210 190 q44 -58 90 -16 q36 34 78 -14'/%3E%3C/g%3E%3Ccircle cx='392' cy='72' r='28' fill='%23f2c14e' fill-opacity='0.9'/%3E%3Cg fill='%23ffffff' fill-opacity='0.22'%3E%3Crect x='40' y='216' width='400' height='3'/%3E%3C/g%3E%3C/svg%3E" alt="海边的第八个镜头封面：青蓝色海岸线与暖色落日" width="480" height="270">
+            <span class="bd-cover-tag">纪录</span>
+            <span class="bd-cover-dur">14:22</span>
+          </div>
+          <div class="bd-card-body">
+            <h3>海边的第八个镜头：一部短片的四次重拍</h3>
+            <p class="bd-excerpt">同一场戏拍了四遍，我们保留了每一版的取舍笔记，也保留了导演在片场说的那句「再来一次」。</p>
+            <div class="bd-tags"><span class="bd-tag">创作幕后</span><span class="bd-tag">短片</span><span class="bd-tag">海边</span></div>
+            <div class="bd-meta"><span class="bd-avatar av-teal">海</span>潮汐影像 <span>·</span> 3.2 万播放</div>
+            <div class="bd-card-actions">
+              <button class="bd-act" type="button" data-bd-like aria-pressed="false"><svg viewBox="0 0 24 24"><path d="M12 20s-7-4.4-7-9.2A4.1 4.1 0 0 1 12 7a4.1 4.1 0 0 1 7 3.8C19 15.6 12 20 12 20z"/></svg><span>点赞 <i data-bd-like-num>842</i></span></button>
+              <button class="bd-act" type="button" data-bd-save aria-pressed="false"><svg viewBox="0 0 24 24"><path d="M6 4h12v16l-6-4-6 4z"/></svg><span>收藏</span></button>
+              <button class="bd-act" type="button" data-bd-open="comment">评论</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="bd-card bd-card-hover">
+          <div class="bd-cover">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 480 270'%3E%3Crect width='480' height='270' fill='%231c1a26'/%3E%3Cg stroke='%23ff9ec4' stroke-width='2' fill='none' opacity='0.8'%3E%3Crect x='96' y='66' width='288' height='138' rx='10'/%3E%3Crect x='120' y='90' width='240' height='90' rx='6'/%3E%3C/g%3E%3Cg fill='%23ff5a5f'%3E%3Crect x='60' y='46' width='16' height='16' rx='3'/%3E%3Crect x='60' y='70' width='16' height='16' rx='3'/%3E%3Crect x='60' y='94' width='16' height='16' rx='3'/%3E%3C/g%3E%3Cg fill='%23f2c14e'%3E%3Crect x='404' y='206' width='16' height='16' rx='3'/%3E%3Crect x='380' y='206' width='16' height='16' rx='3'/%3E%3C/g%3E%3Ccircle cx='240' cy='135' r='22' fill='%23ff9ec4' fill-opacity='0.85'/%3E%3C/svg%3E" alt="一镜到底的声音封面：深色剪辑室与粉色取景框" width="480" height="270">
+            <span class="bd-cover-tag">教程</span>
+            <span class="bd-cover-dur">22:07</span>
+          </div>
+          <div class="bd-card-body">
+            <h3>一镜到底的声音：给短片做声音设计的五个步骤</h3>
+            <p class="bd-excerpt">从环境底噪到空间混响，声音设计师拆解一段三分钟片段的完整处理流程，附工程说明。</p>
+            <div class="bd-tags"><span class="bd-tag">教程干货</span><span class="bd-tag">声音设计</span></div>
+            <div class="bd-meta"><span class="bd-avatar av-pink">声</span>苏录音工作室 <span>·</span> 2.7 万播放</div>
+            <div class="bd-card-actions">
+              <button class="bd-act" type="button" data-bd-like aria-pressed="false"><svg viewBox="0 0 24 24"><path d="M12 20s-7-4.4-7-9.2A4.1 4.1 0 0 1 12 7a4.1 4.1 0 0 1 7 3.8C19 15.6 12 20 12 20z"/></svg><span>点赞 <i data-bd-like-num>613</i></span></button>
+              <button class="bd-act" type="button" data-bd-save aria-pressed="false"><svg viewBox="0 0 24 24"><path d="M6 4h12v16l-6-4-6 4z"/></svg><span>收藏</span></button>
+              <button class="bd-act" type="button" data-bd-open="comment">评论</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="bd-card bd-card-hover">
+          <div class="bd-cover">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 480 270'%3E%3Crect width='480' height='270' fill='%2324181f'/%3E%3Cg fill='%23ff5a5f' fill-opacity='0.85'%3E%3Ccircle cx='120' cy='86' r='34'/%3E%3C/g%3E%3Cg fill='%23f2c14e' fill-opacity='0.85'%3E%3Ccircle cx='120' cy='170' r='34'/%3E%3C/g%3E%3Cg stroke='%23ffffff' stroke-opacity='0.3' stroke-width='2' fill='none'%3E%3Cpath d='M180 128 h120'/%3E%3Cpath d='M300 100 v56'/%3E%3C/g%3E%3Cg fill='%23ffffff' fill-opacity='0.55'%3E%3Crect x='330' y='96' width='96' height='62' rx='8'/%3E%3C/g%3E%3C/svg%3E" alt="两个人一间放映厅访谈封面：红黄圆形与白色对话块" width="480" height="270">
+            <span class="bd-cover-tag">访谈</span>
+            <span class="bd-cover-dur">31:15</span>
+          </div>
+          <div class="bd-card-body">
+            <h3>两个人，一间放映厅：小成本放映空间如何活下来</h3>
+            <p class="bd-excerpt">一对夫妻在旧货市场楼上开了六年放映厅，我们聊了票价、片源、观众和那些差点关门的冬天。</p>
+            <div class="bd-tags"><span class="bd-tag">人物访谈</span><span class="bd-tag">城市探索</span></div>
+            <div class="bd-meta"><span class="bd-avatar av-red">放</span>八度编辑部 <span>·</span> 4.5 万播放</div>
+            <div class="bd-card-actions">
+              <button class="bd-act" type="button" data-bd-like aria-pressed="false"><svg viewBox="0 0 24 24"><path d="M12 20s-7-4.4-7-9.2A4.1 4.1 0 0 1 12 7a4.1 4.1 0 0 1 7 3.8C19 15.6 12 20 12 20z"/></svg><span>点赞 <i data-bd-like-num>1102</i></span></button>
+              <button class="bd-act" type="button" data-bd-save aria-pressed="false"><svg viewBox="0 0 24 24"><path d="M6 4h12v16l-6-4-6 4z"/></svg><span>收藏</span></button>
+              <button class="bd-act" type="button" data-bd-open="comment">评论</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="bd-card bd-card-hover">
+          <div class="bd-cover">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 480 270'%3E%3Crect width='480' height='270' fill='%231a2a22'/%3E%3Cg stroke='%2339c6b5' stroke-width='2.5' fill='none'%3E%3Cpath d='M60 230 L150 150 L220 190 L300 100 L380 140 L430 80'/%3E%3C/g%3E%3Cg fill='%2339c6b5'%3E%3Ccircle cx='150' cy='150' r='6'/%3E%3Ccircle cx='220' cy='190' r='6'/%3E%3Ccircle cx='300' cy='100' r='6'/%3E%3Ccircle cx='380' cy='140' r='6'/%3E%3C/g%3E%3Cg fill='%23f2c14e' fill-opacity='0.85'%3E%3Crect x='60' y='52' width='120' height='10' rx='5'/%3E%3Crect x='60' y='74' width='76' height='10' rx='5'/%3E%3C/g%3E%3C/svg%3E" alt="八度拉片室专题封面：绿色折线与数据折点" width="480" height="270">
+            <span class="bd-cover-tag">解析</span>
+            <span class="bd-cover-dur">16:48</span>
+          </div>
+          <div class="bd-card-body">
+            <h3>八度拉片室：三分钟看懂一场戏的场面调度</h3>
+            <p class="bd-excerpt">我们逐帧拆解一段经典室内戏，看导演如何用站位、光线与镜头长度完成情绪的铺垫。</p>
+            <div class="bd-tags"><span class="bd-tag">深度解析</span><span class="bd-tag">视听语言</span></div>
+            <div class="bd-meta"><span class="bd-avatar av-teal">析</span>拉片室小组 <span>·</span> 3.9 万播放</div>
+            <div class="bd-card-actions">
+              <button class="bd-act" type="button" data-bd-like aria-pressed="false"><svg viewBox="0 0 24 24"><path d="M12 20s-7-4.4-7-9.2A4.1 4.1 0 0 1 12 7a4.1 4.1 0 0 1 7 3.8C19 15.6 12 20 12 20z"/></svg><span>点赞 <i data-bd-like-num>957</i></span></button>
+              <button class="bd-act" type="button" data-bd-save aria-pressed="false"><svg viewBox="0 0 24 24"><path d="M6 4h12v16l-6-4-6 4z"/></svg><span>收藏</span></button>
+              <button class="bd-act" type="button" data-bd-open="comment">评论</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="bd-card bd-card-hover">
+          <div class="bd-cover">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 480 270'%3E%3Crect width='480' height='270' fill='%232b2436'/%3E%3Cg fill='%23b79bff' fill-opacity='0.9'%3E%3Crect x='70' y='120' width='44' height='90' rx='6'/%3E%3Crect x='128' y='86' width='44' height='124' rx='6'/%3E%3Crect x='186' y='140' width='44' height='70' rx='6'/%3E%3C/g%3E%3Cg fill='%23f2c14e'%3E%3Ccircle cx='330' cy='104' r='40'/%3E%3C/g%3E%3Cg stroke='%23ffffff' stroke-opacity='0.4' stroke-width='3' fill='none'%3E%3Cpath d='M300 200 h130'/%3E%3C/path%3E%3C/g%3E%3C/svg%3E" alt="旧光作品展创作者封面：紫色竖条与黄色太阳" width="480" height="270">
+            <span class="bd-cover-tag">作品展</span>
+            <span class="bd-cover-dur">9 部</span>
+          </div>
+          <div class="bd-card-body">
+            <h3>旧光作品展：把镜头对准没有故事发生的地方</h3>
+            <p class="bd-excerpt">九部短片组成的线上作品展，记录楼梯间、候车厅、便利店门口那些被忽略的日常。</p>
+            <div class="bd-tags"><span class="bd-tag">日常记录</span><span class="bd-tag">治愈影像</span></div>
+            <div class="bd-meta"><span class="bd-avatar av-violet">旧</span>旧光 <span>·</span> 5.1 万播放</div>
+            <div class="bd-card-actions">
+              <button class="bd-act" type="button" data-bd-like aria-pressed="false"><svg viewBox="0 0 24 24"><path d="M12 20s-7-4.4-7-9.2A4.1 4.1 0 0 1 12 7a4.1 4.1 0 0 1 7 3.8C19 15.6 12 20 12 20z"/></svg><span>点赞 <i data-bd-like-num>1388</i></span></button>
+              <button class="bd-act" type="button" data-bd-save aria-pressed="false"><svg viewBox="0 0 24 24"><path d="M6 4h12v16l-6-4-6 4z"/></svg><span>收藏</span></button>
+              <button class="bd-act" type="button" data-bd-open="comment">评论</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="bd-card bd-card-hover">
+          <div class="bd-cover">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 480 270'%3E%3Crect width='480' height='270' fill='%23181d2b'/%3E%3Cg fill='%238fc8ff' fill-opacity='0.85'%3E%3Crect x='90' y='60' width='300' height='150' rx='10'/%3E%3C/g%3E%3Cg fill='%23181d2b'%3E%3Crect x='120' y='90' width='240' height='90' rx='6'/%3E%3C/g%3E%3Cg fill='%238fc8ff'%3E%3Ccircle cx='160' cy='118' r='9'/%3E%3Crect x='180' y='112' width='140' height='10' rx='5'/%3E%3Crect x='150' y='146' width='170' height='8' rx='4'/%3E%3C/g%3E%3Cg fill='%23ff5a5f'%3E%3Crect x='90' y='220' width='64' height='8' rx='4'/%3E%3C/g%3E%3C/svg%3E" alt="企业放映日合作案例封面：蓝色屏幕与信息条" width="480" height="270">
+            <span class="bd-cover-tag">品牌故事</span>
+            <span class="bd-cover-dur">11:36</span>
+          </div>
+          <div class="bd-card-body">
+            <h3>一次企业放映日：把会议室变成临时影厅的七天</h3>
+            <p class="bd-excerpt">从选片到布光，从座椅摆放到散场交流，完整记录一场内部放映日的筹备流程与踩坑经验。</p>
+            <div class="bd-tags"><span class="bd-tag">品牌故事</span><span class="bd-tag">线下放映</span></div>
+            <div class="bd-meta"><span class="bd-avatar av-sky">映</span>八度企划组 <span>·</span> 2.1 万播放</div>
+            <div class="bd-card-actions">
+              <button class="bd-act" type="button" data-bd-like aria-pressed="false"><svg viewBox="0 0 24 24"><path d="M12 20s-7-4.4-7-9.2A4.1 4.1 0 0 1 12 7a4.1 4.1 0 0 1 7 3.8C19 15.6 12 20 12 20z"/></svg><span>点赞 <i data-bd-like-num>504</i></span></button>
+              <button class="bd-act" type="button" data-bd-save aria-pressed="false"><svg viewBox="0 0 24 24"><path d="M6 4h12v16l-6-4-6 4z"/></svg><span>收藏</span></button>
+              <button class="bd-act" type="button" data-bd-open="comment">评论</button>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 专题企划 -->
+  <section class="bd-section" id="bd-topics" aria-labelledby="bd-topics-title">
+    <div class="bd-wrap">
+      <div class="bd-sec-head">
+        <h2 id="bd-topics-title">专题企划：正在进行的四个内容方向</h2>
+        <p>每个专题都有明确的作者团队、更新节奏与归档页面，可在专题页查看完整片单与幕后笔记。</p>
+      </div>
+      <div class="bd-topics">
+        <a class="bd-topic" href="#bd-feed">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 360 420'%3E%3Cdefs%3E%3ClinearGradient id='t1' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0' stop-color='%23122c3a'/%3E%3Cstop offset='1' stop-color='%23274054'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='360' height='420' fill='url(%23t1)'/%3E%3Cg fill='%23f2c14e' fill-opacity='0.85'%3E%3Ccircle cx='270' cy='96' r='38'/%3E%3C/g%3E%3Cg fill='%230e1c26' fill-opacity='0.9'%3E%3Crect x='0' y='260' width='360' height='160'/%3E%3C/g%3E%3Cg fill='%233a6279'%3E%3Crect x='40' y='210' width='52' height='50'/%3E%3Crect x='104' y='186' width='40' height='74'/%3E%3Crect x='156' y='224' width='60' height='36'/%3E%3C/g%3E%3C/svg%3E" alt="夜行八度专题封面：深蓝夜色与路灯下的街道" width="360" height="420">
+          <span class="bd-topic-status">更新中</span>
+          <h3>夜行八度 · 城市放映企划</h3>
+          <p>走进凌晨的影院、天台的投影与街角的旧放映机，已更新 4 集。</p>
+        </a>
+        <a class="bd-topic" href="#bd-feed">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 360 420'%3E%3Crect width='360' height='420' fill='%23221d2c'/%3E%3Cg fill='%23ff9ec4' fill-opacity='0.8'%3E%3Crect x='46' y='130' width='46' height='150' rx='8'/%3E%3Crect x='110' y='96' width='46' height='184' rx='8'/%3E%3Crect x='174' y='150' width='46' height='130' rx='8'/%3E%3C/g%3E%3Cg fill='%23f2c14e'%3E%3Ccircle cx='284' cy='120' r='32'/%3E%3C/g%3E%3Cg stroke='%23ffffff' stroke-opacity='0.3' stroke-width='3'%3E%3Cline x1='40' y1='320' x2='320' y2='320'/%3E%3C/g%3E%3C/svg%3E" alt="胶片里的旧城专题封面：紫色与粉色构成的街区剪影" width="360" height="420">
+          <span class="bd-topic-status bd-done">已完结</span>
+          <h3>胶片里的旧城 · 六集记忆</h3>
+          <p>用六集短片记录一座旧城的街巷、影院与人，全集已归档。</p>
+        </a>
+        <a class="bd-topic" href="#bd-feed">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 360 420'%3E%3Crect width='360' height='420' fill='%231d3129'/%3E%3Cg stroke='%2339c6b5' stroke-width='3' fill='none'%3E%3Ccircle cx='180' cy='180' r='86'/%3E%3Ccircle cx='180' cy='180' r='50'/%3E%3C/g%3E%3Cg fill='%23f2c14e'%3E%3Ccircle cx='180' cy='180' r='18'/%3E%3C/g%3E%3Cg fill='%2339c6b5' fill-opacity='0.45'%3E%3Crect x='0' y='330' width='360' height='90'/%3E%3C/g%3E%3C/svg%3E" alt="新人挑战赛专题封面：绿色同心圆与底部色带" width="360" height="420">
+          <span class="bd-topic-status">报名中</span>
+          <h3>八度新人挑战赛 · 一分钟短片</h3>
+          <p>面向学生与业余创作者，主题「我窗外的一分钟」，报名进行中。</p>
+        </a>
+        <a class="bd-topic" href="#bd-feed">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 360 420'%3E%3Crect width='360' height='420' fill='%23271e14'/%3E%3Cg fill='%23f2c14e' fill-opacity='0.85'%3E%3Crect x='52' y='200' width='30' height='110'/%3E%3Crect x='96' y='160' width='30' height='150'/%3E%3Crect x='140' y='220' width='30' height='90'/%3E%3Crect x='184' y='140' width='30' height='170'/%3E%3C/g%3E%3Cg fill='%23ff5a5f'%3E%3Ccircle cx='278' cy='130' r='30'/%3E%3C/g%3E%3Cg stroke='%23ffffff' stroke-opacity='0.25' stroke-width='2'%3E%3Cline x1='40' y1='330' x2='320' y2='330'/%3E%3C/g%3E%3C/svg%3E" alt="幕后访谈企划封面：暖色柱状图与红色圆点" width="360" height="420">
+          <span class="bd-topic-status">筹备中</span>
+          <h3>幕后访谈 · 剪辑台上的三小时</h3>
+          <p>与十位幕后从业者对谈，从剪辑、美术到声音，筹备上线。</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 创作者矩阵 -->
+  <section class="bd-section" id="bd-creators" aria-labelledby="bd-creators-title">
+    <div class="bd-wrap">
+      <div class="bd-sec-head">
+        <h2 id="bd-creators-title">创作者矩阵：在八度电影院持续创作的人</h2>
+        <p>平台为入驻创作者提供拍摄支持、后期协作与放映资源，点击卡片可查看作者档案。</p>
+      </div>
+      <div class="bd-creators">
+        <article class="bd-creator">
+          <div class="bd-creator-avatar" style="background:linear-gradient(135deg,#8fc8ff,#5b8fd6)">夜</div>
+          <h3>夜行影像社</h3>
+          <div class="bd-field">城市纪录 · 夜间影像</div>
+          <p>专注城市夜间空间的纪录小组，拍摄旧影院、夜市与夜班岗位，作品风格安静克制。</p>
+          <div class="bd-creator-stats">
+            <div><b>38</b>作品</div>
+            <div><b>4.2万</b>关注</div>
+          </div>
+          <button class="bd-btn bd-btn-ghost" style="margin-top:14px;width:100%" type="button" data-bd-open="creator" data-bd-name="夜行影像社" data-bd-desc="成立于 2019 年的城市纪录小组，成员 5 人，擅长在低照度环境下拍摄，坚持使用自然光与现场声。代表作《夜行八度》系列、《末班车之后》。">查看作者档案</button>
+        </article>
+        <article class="bd-creator">
+          <div class="bd-creator-avatar" style="background:linear-gradient(135deg,#ff9ec4,#ff5a5f);color:#330f1a">苏</div>
+          <h3>苏录音工作室</h3>
+          <div class="bd-field">声音设计 · 后期制作</div>
+          <p>声音设计师与混音师组合，长期为独立短片提供声音方案，课程以实操见长。</p>
+          <div class="bd-creator-stats">
+            <div><b>24</b>作品</div>
+            <div><b>1.8万</b>关注</div>
+          </div>
+          <button class="bd-btn bd-btn-ghost" style="margin-top:14px;width:100%" type="button" data-bd-open="creator" data-bd-name="苏录音工作室" data-bd-desc="由两位声音设计师组成的工作室，服务过 40 余部独立短片，擅长环境声采集与空间混响处理。在八度电影院开设「声音十讲」系列教程。">查看作者档案</button>
+        </article>
+        <article class="bd-creator">
+          <div class="bd-creator-avatar" style="background:linear-gradient(135deg,#b79bff,#7d62d6);color:#1d1230">旧</div>
+          <h3>旧光</h3>
+          <div class="bd-field">日常记录 · 实验影像</div>
+          <p>独立创作者，习惯用固定镜头记录没有故事发生的地方，作品多次入选平台月度精选。</p>
+          <div class="bd-creator-stats">
+            <div><b>52</b>作品</div>
+            <div><b>5.6万</b>关注</div>
+          </div>
+          <button class="bd-btn bd-btn-ghost" style="margin-top:14px;width:100%" type="button" data-bd-open="creator" data-bd-name="旧光" data-bd-desc="独立影像作者，2018 年开始拍摄日常纪录短片，偏好固定机位与长镜头。曾在八度电影院举办线上作品展《把镜头对准没有故事发生的地方》，共展出九部作品。">查看作者档案</button>
+        </article>
+        <article class="bd-creator">
+          <div class="bd-creator-avatar" style="background:linear-gradient(135deg,#39c6b5,#1f8a7d);color:#0e1b19">潮</div>
+          <h3>潮汐影像</h3>
+          <div class="bd-field">短片创作 · 幕后记录</div>
+          <p>关注创作过程的三人团队，每部作品都同步发布取舍笔记，强调真实与过程的可见性。</p>
+          <div class="bd-creator-stats">
+            <div><b>19</b>作品</div>
+            <div><b>2.9万</b>关注</div>
+          </div>
+          <button class="bd-btn bd-btn-ghost" style="margin-top:14px;width:100%" type="button" data-bd-open="creator" data-bd-name="潮汐影像" data-bd-desc="成立于 2021 年的短片创作团队，主张把创作过程也当作作品的一部分。代表作《海边的第八个镜头》，同步公开四版拍摄笔记与场记表。">查看作者档案</button>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 故事随笔 -->
+  <section class="bd-section" id="bd-stories" aria-labelledby="bd-stories-title">
+    <div class="bd-wrap">
+      <div class="bd-sec-head">
+        <h2 id="bd-stories-title">故事与随笔：影像之外的那些句子</h2>
+        <a class="bd-sec-link" href="#bd-updates">查看企业动态</a>
+      </div>
+      <div class="bd-stories">
+        <article class="bd-story">
+          <span class="bd-story-quote">“</span>
+          <h3>放映员老周的手电筒</h3>
+          <p>他习惯在开场前用手电筒扫一遍座位，确认没有空椅挡住视线。这个动作他做了三十一年，数字化改造之后依然保留。他说，机器可以自动对焦，但观众需要有人确认他们坐好了。</p>
+          <div class="bd-meta"><span class="bd-avatar av-sky">夜</span>夜行影像社 · 随笔</div>
+        </article>
+        <article class="bd-story">
+          <span class="bd-story-quote">“</span>
+          <h3>我们把会议室的黑窗帘借走了</h3>
+          <p>为了做一场内部放映，团队跑遍了整栋楼，最后在会议室找到了最合适的遮光布。那天放映结束时，没有人急着开灯，大家在黑暗里多坐了十分钟，聊起各自第一次进电影院的经历。</p>
+          <div class="bd-meta"><span class="bd-avatar av-red">映</span>八度企划组 · 随笔</div>
+        </article>
+        <article class="bd-story">
+          <span class="bd-story-quote">“</span>
+          <h3>一条声轨改到第七版</h3>
+          <p>声音设计师说，最难的不是做加法，而是决定删掉什么。第七版里，那段持续四十秒的环境声被压得很低，只留下一次很轻的呼吸。观众未必听得出来，但所有人都说那一场戏变得安静了。</p>
+          <div class="bd-meta"><span class="bd-avatar av-pink">声</span>苏录音工作室 · 随笔</div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 作品墙 -->
+  <section class="bd-section" id="bd-wall" aria-labelledby="bd-wall-title">
+    <div class="bd-wrap">
+      <div class="bd-sec-head">
+        <h2 id="bd-wall-title">影像墙：社区作品精选</h2>
+        <p>由观众投票与编辑部推荐共同产生，每月更新一次。</p>
+      </div>
+      <div class="bd-wall">
+        <figure class="bd-w2">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 620 420'%3E%3Crect width='620' height='420' fill='%230f2230'/%3E%3Cg fill='%23f2c14e'%3E%3Ccircle cx='480' cy='110' r='52'/%3E%3C/g%3E%3Cg fill='%23172f3f'%3E%3Crect x='0' y='280' width='620' height='140'/%3E%3C/g%3E%3Cg fill='%232d5c74'%3E%3Crect x='60' y='220' width='58' height='60'/%3E%3Crect x='130' y='190' width='46' height='90'/%3E%3Crect x='188' y='240' width='72' height='40'/%3E%3C/g%3E%3C/svg%3E" alt="影像墙作品：深夜港口的长曝光与暖色灯塔" width="620" height="420">
+          <figcaption>《港口最后三班船》· 夜行影像社</figcaption>
+        </figure>
+        <figure class="bd-w1">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 420'%3E%3Crect width='320' height='420' fill='%23291f31'/%3E%3Cg stroke='%23ff9ec4' stroke-width='3' fill='none'%3E%3Crect x='70' y='120' width='180' height='180' rx='12'/%3E%3C/g%3E%3Cg fill='%23f2c14e'%3E%3Ccircle cx='160' cy='210' r='34'/%3E%3C/g%3E%3C/svg%3E" alt="影像墙作品：粉紫色画框中的光斑" width="320" height="420">
+          <figcaption>《画框里的下午》· 旧光</figcaption>
+        </figure>
+        <figure class="bd-w1">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 420'%3E%3Crect width='320' height='420' fill='%231c332c'/%3E%3Cg stroke='%2339c6b5' stroke-width='3' fill='none'%3E%3Cpath d='M40 300 q60 -70 120 -20 q60 50 120 -30'/%3E%3C/g%3E%3Cg fill='%23f2c14e'%3E%3Ccircle cx='248' cy='96' r='28'/%3E%3C/g%3E%3C/svg%3E" alt="影像墙作品：绿色山线与远处日轮" width="320" height="420">
+          <figcaption>《山线的第八次回望》· 潮汐影像</figcaption>
+        </figure>
+        <figure class="bd-w3">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 220'%3E%3Crect width='640' height='220' fill='%2328221a'/%3E%3Cg fill='%23f2c14e' fill-opacity='0.8'%3E%3Crect x='40' y='130' width='34' height='70'/%3E%3Crect x='88' y='100' width='34' height='100'/%3E%3Crect x='136' y='150' width='34' height='50'/%3E%3Crect x='184' y='86' width='34' height='114'/%3E%3C/g%3E%3Cg fill='%23ff5a5f'%3E%3Ccircle cx='520' cy='90' r='36'/%3E%3C/g%3E%3Cg stroke='%23ffffff' stroke-opacity='0.3' stroke-width='2'%3E%3Cline x1='30' y1='200' x2='610' y2='200'/%3E%3C/g%3E%3C/svg%3E" alt="影像墙作品：暖色楼宇剪影与红色标识" width="640" height="220">
+          <figcaption>《城市温度计》· 八度企划组</figcaption>
+        </figure>
+        <figure class="bd-w2">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 620 420'%3E%3Crect width='620' height='420' fill='%23131c2c'/%3E%3Cg fill='%238fc8ff' fill-opacity='0.85'%3E%3Crect x='90' y='80' width='440' height='250' rx='14'/%3E%3C/g%3E%3Cg fill='%23131c2c'%3E%3Crect x='120' y='110' width='380' height='190' rx='8'/%3E%3C/g%3E%3Cg fill='%23ff5a5f'%3E%3Cpath d='M290 170 L290 240 L350 205 Z'/%3E%3C/g%3E%3C/svg%3E" alt="影像墙作品：蓝色屏幕中的播放三角" width="620" height="420">
+          <figcaption>《屏幕之内》· 苏录音工作室</figcaption>
+        </figure>
+        <figure class="bd-w1">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 420'%3E%3Crect width='320' height='420' fill='%232b1f2a'/%3E%3Cg fill='%23ff5a5f' fill-opacity='0.85'%3E%3Ccircle cx='120' cy='160' r='48'/%3E%3C/g%3E%3Cg fill='%23f2c14e'%3E%3Crect x='90' y='250' width='150' height='14' rx='7'/%3E%3C/svg%3E" alt="影像墙作品：红色圆形与黄色横条" width="320" height="420">
+          <figcaption>《第七次红色》· 旧光</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- 评论 -->
+  <section class="bd-section" id="bd-reviews" aria-labelledby="bd-reviews-title">
+    <div class="bd-wrap">
+      <div class="bd-sec-head">
+        <h2 id="bd-reviews-title">观众与创作者怎么说</h2>
+        <p>来自社区的真实反馈，语气、维度各不相同，我们保留原样呈现。</p>
+      </div>
+      <div class="bd-reviews">
+        <article class="bd-review">
+          <p>《夜行八度》第四集让我想起小时候家附近的影院。散场之后灯亮起来的那个瞬间，我在屏幕前愣了很久。谢谢八度电影院把这个片子做出来。</p>
+          <div class="bd-meta"><span class="bd-avatar av-sky">林</span>林屿 · 观众</div>
+        </article>
+        <article class="bd-review">
+          <p>声音设计那期教程我反复看了三遍，工程文件说明写得很细。作为一个刚入行的剪辑，这种可操作的干货比空谈美学有用多了。</p>
+          <div class="bd-meta"><span class="bd-avatar av-teal">剪</span>小剪 · 剪辑师</div>
+        </article>
+        <article class="bd-review">
+          <p>我是通过新人挑战赛第一次把片子投出去的。评审反馈很具体，指出了我镜头节奏的问题，也给了修改建议。这种认真劲儿很少见。</p>
+          <div class="bd-meta"><span class="bd-avatar av-pink">周</span>周叙 · 学生创作者</div>
+        </article>
+        <article class="bd-review">
+          <p>平台页面很干净，找片、看作者、翻专题都很顺，更新频率也稳定。作为长期用户，最看重的就是「持续运营」这四个字，这里做到了。</p>
+          <div class="bd-meta"><span class="bd-avatar av-violet">陈</span>陈默 · 常年影迷</div>
+        </article>
+        <article class="bd-review">
+          <p>合作过一次线下放映，从选片到物料都很专业。沟通效率高，版权说明也清晰，这对企业合作方来说非常重要。</p>
+          <div class="bd-meta"><span class="bd-avatar av-red">合</span>某文化空间 · 合作方</div>
+        </article>
+        <article class="bd-review">
+          <p>唯一的建议是希望专题页能加一个按年份筛选的功能。不过整体体验已经很好了，尤其是作品墙，经常能翻到惊喜。</p>
+          <div class="bd-meta"><span class="bd-avatar av-amber" style="background:#f2c14e">禾</span>禾禾 · 观众</div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 企业动态 -->
+  <section class="bd-section" id="bd-updates" aria-labelledby="bd-updates-title">
+    <div class="bd-wrap">
+      <div class="bd-sec-head">
+        <h2 id="bd-updates-title">企业动态与官方发布</h2>
+        <a class="bd-sec-link" href="#bd-help">联系企业合作</a>
+      </div>
+      <div class="bd-timeline">
+        <article class="bd-tl-item">
+          <time datetime="2026-11-18">2026 / 11 / 18</time>
+          <h3>《夜行八度》第四集上线，城市放映企划进入第二阶段</h3>
+          <p>本集聚焦旧影院与放映员，同步开放线下放映预约。官方发布完整片单与放映空间名单，可通过帮助页面获取。</p>
+        </article>
+        <article class="bd-tl-item">
+          <time datetime="2026-11-12">2026 / 11 / 12</time>
+          <h3>八度新人挑战赛报名启动：主题「我窗外的一分钟」</h3>
+          <p>面向学生与业余创作者，提交一分钟以内的原创短片即可参与。评审团由平台创作者与编辑部共同组成，优秀作品将在官网首页推荐。</p>
+        </article>
+        <article class="bd-tl-item">
+          <time datetime="2026-11-05">2026 / 11 / 05</time>
+          <h3>内容规范更新：补充引用素材与音乐授权说明</h3>
+          <p>为保护原创与版权，平台更新投稿规范中的引用素材条款，新增可下载的授权确认模板，所有创作者可在投稿页查看。</p>
+        </article>
+        <article class="bd-tl-item">
+          <time datetime="2026-10-28">2026 / 10 / 28</time>
+          <h3>与三家城市文化空间达成放映合作</h3>
+          <p>合作空间将定期承接八度电影院的社区放映活动，并为首映场提供场地支持。合作名单与合作方式已在官网公布。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 合作 + FAQ + 联系 -->
+  <section class="bd-section" id="bd-help" aria-labelledby="bd-help-title">
+    <div class="bd-wrap">
+      <div class="bd-sec-head">
+        <h2 id="bd-help-title">帮助、合作与联系方式</h2>
+        <p>无论是投稿、观看还是企业合作，这里都有对应的入口。</p>
+      </div>
+
+      <div class="bd-partners" style="margin-bottom:44px">
+        <div class="bd-partner"><i>光</i>光影文化空间</div>
+        <div class="bd-partner"><i>城</i>城市影像档案馆</div>
+        <div class="bd-partner"><i>声</i>声场录音棚</div>
+        <div class="bd-partner"><i>校</i>南方高校影展</div>
+        <div class="bd-partner"><i>胶</i>胶片修复计划</div>
+      </div>
+
+      <div class="bd-assist-grid">
+        <div class="bd-faq">
+          <details open>
+            <summary>八度电影院官网的内容都是原创的吗？</summary>
+            <p>平台所有标注「原创」的影像与文字均由入驻创作者或编辑部制作，发布前完成授权确认。引用第三方素材的片段会在片尾与页面说明中标注出处，平台提供高清播放与规范的转载申请流程。</p>
+          </details>
+          <details>
+            <summary>如何向八度电影院投稿？</summary>
+            <p>点击页头的「我要投稿」按钮，填写作品信息与授权确认即可。初审一般在七个工作日内完成，通过后会与你沟通上线排期与专题归属。学生创作者可备注参与新人挑战赛。</p>
+          </details>
+          <details>
+            <summary>平台是否支持创作者分成？</summary>
+            <p>支持。签约创作者可参与播放分成与专题稿酬计划，具体规则在作者后台公布。我们坚持透明的结算方式，并定期发布创作者公约修订记录。</p>
+          </details>
+          <details>
+            <summary>可以在线下组织放映活动吗？</summary>
+            <p>可以。平台与多个城市文化空间保持合作，可为社区放映、企业放映日与校园放映提供片源、物料与流程支持。请通过联系页面提交活动需求。</p>
+          </details>
+          <details>
+            <summary>作品上线后还能修改吗？</summary>
+            <p>可以提交修改申请，说明修改原因与范围。涉及片长与版权信息的修改需重新确认授权。平台建议在投稿前完成终版校对，以减少反复。</p>
+          </details>
+          <details>
+            <summary>如何联系企业合作或媒体采访？</summary>
+            <p>企业合作、品牌联名与媒体采访请使用联系区域的邮箱，注明合作类型与时间安排，我们会在三个工作日内回复。</p>
+          </details>
+        </div>
+
+        <div class="bd-contact-box">
+          <h3>联系八度电影院</h3>
+          <p>品牌合作、放映申请、投稿咨询与媒体联络，都可以从这里开始。</p>
+          <div class="bd-contact-row"><span>企业合作</span><b>partner@badu-cinema.example</b></div>
+          <div class="bd-contact-row"><span>投稿咨询</span><b>creator@badu-cinema.example</b></div>
+          <div class="bd-contact-row"><span>放映申请</span><b>screening@badu-cinema.example</b></div>
+          <div class="bd-contact-row"><span>工作时间</span><b>周一至周五 10:00–19:00</b></div>
+          <div class="bd-contact-actions">
+            <button class="bd-btn bd-btn-primary" type="button" data-bd-open="submit">我要投稿</button>
+            <button class="bd-btn bd-btn-ghost" type="button" data-bd-open="share">分享本站</button>
+            <button class="bd-btn bd-btn-ghost" type="button" data-bd-open="report">反馈建议</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 订阅条 -->
+  <section class="bd-join" aria-labelledby="bd-join-title">
+    <div class="bd-wrap bd-join-inner">
+      <div>
+        <h2 id="bd-join-title">订阅八度电影院的每周片单</h2>
+        <p>每周一发送精选影像、专题更新与放映活动信息。我们只发送与内容有关的事，随时可以退订。</p>
+      </div>
+      <form class="bd-join-form" id="bd-join-form">
+        <input type="email" id="bd-join-email" placeholder="输入邮箱地址" aria-label="邮箱地址" required>
+        <button class="bd-btn bd-btn-primary" type="submit">订阅片单</button>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="bd-footer">
+  <div class="bd-wrap">
+    <div class="bd-footer-grid">
+      <div class="bd-footer-brand">
+        <div class="bd-logo">
+          <span class="bd-logo-mark" aria-hidden="true"></span>
+          <span class="bd-logo-text"><b>八度电影院</b><small>Eighth Degree</small></span>
+        </div>
+        <p>八度电影院官方网站，是一个深耕电影垂直领域的视频内容品牌。我们坚持原创、正版与高清品质，为创作者与企业搭建值得信赖的内容生态，持续运营一个有温度的电影社区。</p>
+      </div>
+      <div>
+        <h4>内容</h4>
+        <ul>
+          <li><a href="#bd-focus">焦点内容</a></li>
+          <li><a href="#bd-feed">热门影像</a></li>
+          <li><a href="#bd-topics">专题企划</a></li>
+          <li><a href="#bd-wall">影像墙</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>品牌</h4>
+        <ul>
+          <li><a href="#bd-about">品牌解析</a></li>
+          <li><a href="#bd-creators">创作者矩阵</a></li>
+          <li><a href="#bd-updates">企业动态</a></li>
+          <li><a href="#bd-help">帮助与联系</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>参与</h4>
+        <ul>
+          <li><a href="#bd-help">投稿指南</a></li>
+          <li><a href="#bd-help">新人挑战赛</a></li>
+          <li><a href="#bd-help">线下放映</a></li>
+          <li><a href="#bd-help">企业合作</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="bd-footer-bottom">
+      <span>© 2026 八度电影院 版权所有 · 官方网站 · 持续运营中</span>
+      <span>品牌信息备案：八度影字 2026-0118 · 内容规范版本 v3.2</span>
+    </div>
+  </div>
+</footer>
+
+<button class="bd-to-top" id="bd-to-top" type="button" aria-label="回到顶部">↑</button>
+<div class="bd-toast" id="bd-toast" role="status" aria-live="polite"></div>
+
+<!-- 弹窗：评论 -->
+<div class="bd-modal" id="bd-modal-comment" role="dialog" aria-modal="true" aria-labelledby="bd-modal-comment-title">
+  <div class="bd-modal-card">
+    <button class="bd-modal-close" type="button" data-bd-close aria-label="关闭">×</button>
+    <h3 id="bd-modal-comment-title">写一条评论</h3>
+    <p>评论会展示在作品页面下方，请保持友善与具体。带 * 为必填项。</p>
+    <textarea id="bd-comment-text" placeholder="说说你对这部作品的感受……"></textarea>
+    <input type="text" placeholder="昵称 *" id="bd-comment-name">
+    <button class="bd-btn bd-btn-primary" type="button" id="bd-comment-submit" style="width:100%">提交评论</button>
+  </div>
+</div>
+
+<!-- 弹窗：分享 -->
+<div class="bd-modal" id="bd-modal-share" role="dialog" aria-modal="true" aria-labelledby="bd-modal-share-title">
+  <div class="bd-modal-card">
+    <button class="bd-modal-close" type="button" data-bd-close aria-label="关闭">×</button>
+    <h3 id="bd-modal-share-title">分享八度电影院</h3>
+    <p>把官网推荐给同样喜欢电影的朋友，或复制链接保存到自己的清单。</p>
+    <div class="bd-share-row">
+      <button type="button" data-bd-share="wechat">微信</button>
+      <button type="button" data-bd-share="weibo">微博</button>
+      <button type="button" data-bd-share="qq">QQ</button>
+      <button type="button" data-bd-share="copy">复制链接</button>
+    </div>
+  </div>
+</div>
+
+<!-- 弹窗：作者档案 -->
+<div class="bd-modal" id="bd-modal-creator" role="dialog" aria-modal="true" aria-labelledby="bd-modal-creator-title">
+  <div class="bd-modal-card">
+    <button class="bd-modal-close" type="button" data-bd-close aria-label="关闭">×</button>
+    <h3 id="bd-modal-creator-title">作者档案</h3>
+    <p id="bd-modal-creator-desc">作者信息加载中。</p>
+    <button class="bd-btn bd-btn-primary" type="button" data-bd-close style="width:100%">返回页面</button>
+  </div>
+</div>
+
+<!-- 弹窗：投稿 -->
+<div class="bd-modal" id="bd-modal-submit" role="dialog" aria-modal="true" aria-labelledby="bd-modal-submit-title">
+  <div class="bd-modal-card">
+    <button class="bd-modal-close" type="button" data-bd-close aria-label="关闭">×</button>
+    <h3 id="bd-modal-submit-title">向八度电影院投稿</h3>
+    <p>请填写作品名称与联系方式，编辑部会在七个工作日内回复初审结果。</p>
+    <input type="text" placeholder="作品名称 *" id="bd-submit-title">
+    <input type="text" placeholder="作者 / 团队名称 *" id="bd-submit-author">
+    <input type="email" placeholder="联系邮箱 *" id="bd-submit-email">
+    <textarea placeholder="一句话介绍你的作品（可附创作说明）"></textarea>
+    <button class="bd-btn bd-btn-primary" type="button" id="bd-submit-btn" style="width:100%">提交投稿意向</button>
+  </div>
+</div>
+
+<!-- 弹窗：反馈 -->
+<div class="bd-modal" id="bd-modal-report" role="dialog" aria-modal="true" aria-labelledby="bd-modal-report-title">
+  <div class="bd-modal-card">
+    <button class="bd-modal-close" type="button" data-bd-close aria-label="关闭">×</button>
+    <h3 id="bd-modal-report-title">反馈与建议</h3>
+    <p>遇到页面问题、内容疑问或想提建议，都可以写在这里。我们认真读每一条反馈。</p>
+    <textarea id="bd-report-text" placeholder="请描述你的问题或建议……"></textarea>
+    <button class="bd-btn bd-btn-primary" type="button" id="bd-report-btn" style="width:100%">提交反馈</button>
+  </div>
+</div>
+
+<script>
+(function(){
+  "use strict";
+
+  var toastEl = document.getElementById('bd-toast');
+  var toastTimer = null;
+  function toast(msg){
+    if(!toastEl) return;
+    toastEl.textContent = msg;
+    toastEl.classList.add('bd-show');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(function(){ toastEl.classList.remove('bd-show'); }, 2400);
+  }
+
+  /* 移动端导航折叠 */
+  var burger = document.getElementById('bd-burger');
+  var nav = document.getElementById('bd-main-nav');
+  if(burger && nav){
+    burger.addEventListener('click', function(){
+      var open = nav.classList.toggle('bd-open');
+      burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+      burger.textContent = open ? '×' : '☰';
+    });
+    nav.addEventListener('click', function(e){
+      if(e.target.tagName === 'A'){
+        nav.classList.remove('bd-open');
+        burger.setAttribute('aria-expanded','false');
+        burger.textContent = '☰';
+      }
+    });
+  }
+
+  /* 搜索提示与前端反馈 */
+  var searchInput = document.getElementById('bd-search-input');
+  var searchBtn = document.getElementById('bd-search-btn');
+  var searchHint = document.getElementById('bd-search-hint');
+  function doSearch(){
+    var kw = (searchInput.value || '').trim();
+    if(!kw){
+      if(searchHint){
+        searchHint.textContent = '输入关键词，如「夜行」「胶片」「幕后」「声音」。';
+        searchHint.classList.add('bd-show');
+      }
+      return;
+    }
+    var pool = ['夜行八度','胶片里的旧城','剪辑台上的三小时','声音设计','旧光作品展','新人挑战赛','放映日','拉片室'];
+    var hit = pool.filter(function(item){ return item.indexOf(kw) > -1 || kw.indexOf(item.slice(0,2)) > -1; });
+    if(searchHint){
+      if(hit.length){
+        searchHint.textContent = '找到相关条目：' + hit.slice(0,3).join('、') + '（已为你定位到热门影像区）';
+      }else{
+        searchHint.textContent = '暂未匹配到「' + kw + '」，可试试「夜行」「胶片」「声音」等关键词。';
+      }
+      searchHint.classList.add('bd-show');
+    }
+    var feed = document.getElementById('bd-feed');
+    if(feed){ feed.scrollIntoView({behavior:'smooth', block:'start'}); }
+    toast('已根据「' + kw + '」展示相关内容');
+  }
+  if(searchBtn){ searchBtn.addEventListener('click', doSearch); }
+  if(searchInput){
+    searchInput.addEventListener('keydown', function(e){
+      if(e.key === 'Enter'){ e.preventDefault(); doSearch(); }
+    });
+    searchInput.addEventListener('focus', function(){
+      if(searchHint){
+        searchHint.textContent = '试试「夜行」「胶片」「幕后」等关键词，回车查看匹配结果。';
+        searchHint.classList.add('bd-show');
+      }
+    });
+    document.addEventListener('click', function(e){
+      if(searchHint && !searchHint.contains(e.target) && e.target !== searchInput && e.target !== searchBtn){
+        if(searchHint.contains(e.target)) return;
+        searchHint.classList.remove('bd-show');
+      }
+    });
+  }
+
+  /* 点赞 */
+  document.querySelectorAll('[data-bd-like]').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var numEl = btn.querySelector('[data-bd-like-num]');
+      var liked = btn.classList.toggle('bd-liked');
+      btn.setAttribute('aria-pressed', liked ? 'true' : 'false');
+      if(numEl){
+        var n = parseInt(numEl.textContent.replace(/[^0-9]/g,''),10) || 0;
+        n = liked ? n + 1 : Math.max(0, n - 1);
+        numEl.textContent = n;
+      }
+      toast(liked ? '已点赞，感谢支持' : '已取消点赞');
+    });
+  });
+
+  /* 收藏 */
+  document.querySelectorAll('[data-bd-save]').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var saved = btn.classList.toggle('bd-saved');
+      btn.setAttribute('aria-pressed', saved ? 'true' : 'false');
+      var label = btn.querySelector('span');
+      if(label){ label.textContent = saved ? '已收藏' : '收藏'; }
+      toast(saved ? '已加入收藏夹' : '已取消收藏');
+    });
+  });
+
+  /* 弹窗控制 */
+  var lastFocus = null;
+  function openModal(key){
+    var modal = document.getElementById('bd-modal-' + key);
+    if(!modal) return;
+    lastFocus = document.activeElement;
+    modal.classList.add('bd-show');
+    var input = modal.querySelector('input, textarea, button');
+    if(input){ setTimeout(function(){ try{ input.focus(); }catch(err){} }, 60); }
+  }
+  function closeModals(){
+    document.querySelectorAll('.bd-modal.bd-show').forEach(function(m){ m.classList.remove('bd-show'); });
+    if(lastFocus && lastFocus.focus){ try{ lastFocus.focus(); }catch(err){} }
+  }
+  document.querySelectorAll('[data-bd-open]').forEach(function(el){
+    el.addEventListener('click', function(){
+      var key = el.getAttribute('data-bd-open');
+      if(key === 'creator'){
+        var name = el.getAttribute('data-bd-name') || '作者';
+        var desc = el.getAttribute('data-bd-desc') || '';
+        var titleEl = document.getElementById('bd-modal-creator-title');
+        var descEl = document.getElementById('bd-modal-creator-desc');
+        if(titleEl){ titleEl.textContent = name; }
+        if(descEl){ descEl.textContent = desc; }
+      }
+      openModal(key);
+    });
+  });
+  document.querySelectorAll('[data-bd-close]').forEach(function(el){
+    el.addEventListener('click', closeModals);
+  });
+  document.querySelectorAll('.bd-modal').forEach(function(m){
+    m.addEventListener('click', function(e){ if(e.target === m){ closeModals(); } });
+  });
+  document.addEventListener('keydown', function(e){ if(e.key === 'Escape'){ closeModals(); } });
+
+  /* 评论提交 */
+  var commentSubmit = document.getElementById('bd-comment-submit');
+  if(commentSubmit){
+    commentSubmit.addEventListener('click', function(){
+      var text = document.getElementById('bd-comment-text');
+      var name = document.getElementById('bd-comment-name');
+      if(!text || !text.value.trim()){ toast('请先写下评论内容'); return; }
+      if(!name || !name.value.trim()){ toast('请填写昵称'); return; }
+      text.value = ''; name.value = '';
+      closeModals();
+      toast('评论已提交，将在审核后展示');
+    });
+  }
+
+  /* 投稿提交 */
+  var submitBtn = document.getElementById('bd-submit-btn');
+  if(submitBtn){
+    submitBtn.addEventListener('click', function(){
+      var t = document.getElementById('bd-submit-title');
+      var a = document.getElementById('bd-submit-author');
+      var m = document.getElementById('bd-submit-email');
+      if(!t.value.trim() || !a.value.trim() || !m.value.trim()){
+        toast('请填写作品名称、作者与联系邮箱');
+        return;
+      }
+      t.value = ''; a.value = ''; m.value = '';
+      closeModals();
+      toast('投稿意向已收到，编辑部将在七个工作日内回复');
+    });
+  }
+
+  /* 反馈提交 */
+  var reportBtn = document.getElementById('bd-report-btn');
+  if(reportBtn){
+    reportBtn.addEventListener('click', function(){
+      var r = document.getElementById('bd-report-text');
+      if(!r.value.trim()){ toast('请先填写反馈内容'); return; }
+      r.value = '';
+      closeModals();
+      toast('反馈已提交，感谢你的建议');
+    });
+  }
+
+  /* 分享 */
+  document.querySelectorAll('[data-bd-share]').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var type = btn.getAttribute('data-bd-share');
+      if(type === 'copy'){
+        var link = '八度电影院官网';
+        if(navigator.clipboard && navigator.clipboard.writeText){
+          navigator.clipboard.writeText(link).then(function(){ toast('链接已复制'); }).catch(function(){ toast('复制失败，请手动保存'); });
+        }else{
+          toast('当前环境不支持自动复制，请手动保存');
+        }
+        return;
+      }
+      var map = {wechat:'微信', weibo:'微博', qq:'QQ'};
+      toast('已打开' + (map[type] || '') + '分享入口（示例）');
+      closeModals();
+    });
+  });
+
+  /* 订阅 */
+  var joinForm = document.getElementById('bd-join-form');
+  if(joinForm){
+    joinForm.addEventListener('submit', function(e){
+      e.preventDefault();
+      var email = document.getElementById('bd-join-email');
+      if(!email.value.trim() || email.value.indexOf('@') < 0){ toast('请输入有效的邮箱地址'); return; }
+      email.value = '';
+      toast('订阅成功，每周一片单将发送到你的邮箱');
+    });
+  }
+
+  /* 回到顶部 */
+  var toTop = document.getElementById('bd-to-top');
+  if(toTop){
+    window.addEventListener('scroll', function(){
+      if(window.scrollY > 560){ toTop.classList.add('bd-show'); }
+      else{ toTop.classList.remove('bd-show'); }
+    }, {passive:true});
+    toTop.addEventListener('click', function(){
+      window.scrollTo({top:0, behavior:'smooth'});
+    });
+  }
+
+  /* 数字滚动 */
+  var counters = document.querySelectorAll('[data-bd-count]');
+  function animateCount(el){
+    var target = parseInt(el.getAttribute('data-bd-count'),10) || 0;
+    var start = 0, dur = 1100, t0 = null;
+    function step(ts){
+      if(!t0){ t0 = ts; }
+      var p = Math.min((ts - t0) / dur, 1);
+      var val = Math.floor(start + (target - start) * (1 - Math.pow(1 - p, 3)));
+      el.textContent = val;
+      if(p < 1){ requestAnimationFrame(step); }
+      else{ el.textContent = target; }
+    }
+    requestAnimationFrame(step);
+  }
+  if('IntersectionObserver' in window && counters.length){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if(en.isIntersecting){
+          animateCount(en.target);
+          io.unobserve(en.target);
+        }
+      });
+    }, {threshold:0.4});
+    counters.forEach(function(c){ io.observe(c); });
+  }else{
+    counters.forEach(function(c){ c.textContent = c.getAttribute('data-bd-count'); });
+  }
+
+  /* 锚点滚动预留吸顶高度 */
+  var sticky = document.querySelector('.bd-sticky-top');
+  function offsetForAnchors(){
+    if(!sticky) return;
+    var h = sticky.offsetHeight;
+    document.querySelectorAll('section[id], main[id]').forEach(function(sec){
+      sec.style.scrollMarginTop = (h + 12) + 'px';
+    });
+  }
+  offsetForAnchors();
+  window.addEventListener('resize', offsetForAnchors);
+})();
+</script>
+</body>
+  </html>
